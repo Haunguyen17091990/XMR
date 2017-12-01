@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<script>
+// If we have Navigation Timing, make everything relative to navigationStart. Ow, get a time value as early as possible.
+var t_start = (window.performance ? Math.round(performance.timing.navigationStart) : new Date().getTime());
+var t_image, t_after_image;
+
+function send_beacon() {
+var t_onload_handler = t_image - t_start;
+var t_inline_script = t_after_image - t_start;
+var t_custom_metric = Math.max(t_onload_handler, t_inline_script);
+
+(new Image()).src = "//beacon.marathon.mesos.vn/?site=" + window.location.hostname + "&time=" + t_custom_metric + "ms";
+}
+
+if (window.addEventListener) { // W3C standard
+window.addEventListener('load', send_beacon, false);
+}
+else if (window.attachEvent) { // Microsoft
+window.attachEvent('onload', send_beacon);
+}
+</script>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><title>Kênh thông tin ô tô, xe hơi, xe máy độ, lái xe ô tô | Autopro.com.vn</title><meta id="newskeywords" name="news_keywords" content="Tin tức thị trường ô tô, xe máy trong nước và quốc tế, xe máy độ, video đua xe, kỹ thuật lái xe, đua xe, xe đua" /><meta id="metakeywords" name="keywords" content="Tin tức thị trường ô tô, xe máy trong nước và quốc tế, xe máy độ, video đua xe, kỹ thuật lái xe, đua xe, xe đua" /><meta id="metaDes" name="description" content="Tin tức thị trường ô tô, xe máy trong nước và quốc tế, xe máy độ, video đua xe, kỹ thuật lái xe, đua xe, xe đua" />
+<meta property="og:type" content="article" />
+<meta prefix="fb: https://ogp.me/ns/fb#" property="fb:app_id" content="177688935738717" />
+<link rel="canonical" href="autopro_com_default.html" />
+<link rel="alternate" type="application/rss+xml" href="https://autopro.com.vn/home.rss" title="Kênh thông tin ô tô, xe hơi, xe máy độ, lái xe ô tô" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.autopro.com.vn/" />
+<link rel="alternate" media="handheld" href="http://m.autopro.com.vn/" />
+<meta http-equiv="audience" content="General" /><meta name="generator" content="VCCorp.vn" /><meta name="copyright" content="Công ty cổ phần Truyền Thông Việt Nam - Vccorp" /><meta name="author" content="VCCorp.vn" /><meta name="Language" content="vi" /><meta name="resource-type" content="Document" /><meta name="distribution" content="Global" /><meta name="revisit-after" content="1 days" />
+<meta name="robots" content="index, follow, archive" />
+<meta name="googlebot" content="index, follow, archive, snippet" /><meta name="google-site-verification" content="5NwGob21pgt4ekrW6xFXzhUzTrGy0ltkRU-mOjCeyE8" /><meta name="alexaVerifyID" content="WGtLfdQ5I66vdyNAnGP2rn_k4gE" /><meta property="fb:pages" content="142127115826043" /><meta name="apple-mobile-web-app-title" content="Auto" /><meta name="application-name" content="Auto" /><link rel="shortcut icon" href="https://autopro56.mediacdn.vn/web_images/auto32.png" type="image/png" /><link rel="apple-touch-icon" sizes="57x57" href="https://autopro56.mediacdn.vn/web_images/auto57.png" /><link rel="apple-touch-icon" sizes="60x60" href="https://autopro56.mediacdn.vn/web_images/auto60.png" /><link rel="apple-touch-icon" sizes="72x72" href="https://autopro56.mediacdn.vn/web_images/auto72.png" /><link rel="apple-touch-icon" sizes="76x76" href="https://autopro56.mediacdn.vn/web_images/auto76.png" /><link rel="apple-touch-icon" sizes="114x114" href="https://autopro56.mediacdn.vn/web_images/auto114.png" /><link rel="apple-touch-icon" sizes="120x120" href="https://autopro56.mediacdn.vn/web_images/auto120.png" /><link rel="apple-touch-icon" sizes="128x128" href="https://autopro56.mediacdn.vn/web_images/auto128.png" /><link rel="apple-touch-icon" sizes="144x144" href="https://autopro56.mediacdn.vn/web_images/auto144.png" /><link rel="apple-touch-icon" sizes="152x152" href="https://autopro56.mediacdn.vn/web_images/auto152.png" /><link rel="apple-touch-icon" sizes="180x180" href="https://autopro56.mediacdn.vn/web_images/auto180.png" /><link rel="icon" type="image/png" href="https://autopro56.mediacdn.vn/web_images/auto32.png" sizes="32x32" /><link rel="icon" type="image/png" href="https://autopro56.mediacdn.vn/web_images/auto192.png" sizes="192x192" /><link rel="icon" type="image/png" href="https://autopro56.mediacdn.vn/web_images/auto96.png" sizes="96x96" /><link rel="icon" type="image/png" href="https://autopro56.mediacdn.vn/web_images/auto16.png" sizes="16x16" /><script type="text/javascript">DomainConfig = {
+AjaxDomain: "https://autopros.cnnd.vn",
+LinkSuggestVideoXML: "http%3a%2f%2fs.autopro.com.vn%2fhandlers%2fvideo%2fListVideoXML.ashx%3f_videoId%3d"
+};</script>
+
+<link href="https://autopro56.mediacdn.vn/web_css/csshome.min.2017091901.css" rel="stylesheet" type="text/css" />
+
+
+<script src="https://autopro56.mediacdn.vn/web_js/jshome.min.2017112100.js" type="text/javascript" async></script>
+<script>
+(runinit = window.runinit || []).push(function () {
+search_click();
+prNews.homeList();
+home_lazyload();
+activeMenu();
+//home_log3();
+$(function () {
+$("#pager-slide-small a").addClass("sprite");
+});
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://sentry.mediacdn.vn/raven.min.js" async></script>
+<script>
+// https://gist.github.com/impressiver/5092952
+(runinit = window.runinit || []).push(function () {
+var ravenOptions = {
+// Will cause a deprecation warning, but the demise of `ignoreErrors` is still under discussion.
+// See: https://github.com/getsentry/raven-js/issues/73
+ignoreErrors: [
+// Random plugins/extensions
+'top.GLOBALS',
+// See: http://blog.errorception.com/2012/03/tale-of-unfindable-js-error.html
+'originalCreateNotification',
+'canvas.contentDocument',
+'MyApp_RemoveAllHighlights',
+'http://tt.epicplay.com',
+'Can\'t find variable: ZiteReader',
+'jigsaw is not defined',
+'ComboSearch is not defined',
+'http://loading.retry.widdit.com/',
+'atomicFindClose',
+// Facebook borked
+'fb_xd_fragment',
+// ISP "optimizing" proxy - `Cache-Control: no-transform` seems to reduce this. (thanks @acdha)
+// See http://stackoverflow.com/questions/4113268/how-to-stop-javascript-injection-from-vodafone-proxy
+'bmi_SafeAddOnload',
+'EBCallBackMessageReceived',
+// See http://toolbar.conduit.com/Developer/HtmlAndGadget/Methods/JSInjection.aspx
+'conduitPage',
+// Generic error code from errors outside the security sandbox
+// You can delete this if using raven.js > 1.0, which ignores these automatically.
+'Script error.'
+],
+ignoreUrls: [
+// Facebook flakiness
+/graph\.facebook\.com/i,
+// Facebook blocked
+/connect\.facebook\.net\/en_US\/all\.js/i,
+// Woopra flakiness
+/eatdifferent\.com\.woopra-ns\.com/i,
+/static\.woopra\.com\/js\/woopra\.js/i,
+// Chrome extensions
+/extensions\//i,
+/^chrome:\/\//i,
+// Other plugins
+/127\.0\.0\.1:4001\/isrunning/i, // Cacaoweb
+/webappstoolbarba\.texthelp\.com\//i,
+/metrics\.itunes\.apple\.com\.edgesuite\.net\//i
+]
+};
+// Configure Raven and install default handler to capture uncaught exceptions
+$(window).load(function () {
+Raven.config('//8b869eecd2534c8bacfbddd6416f34d5@sentry.marathon.mesos.vn/17', ravenOptions).install();
+});
+
+CheckMobileRedirect();
+});
+</script>
+
+
+<script>
+
+(function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments);
+}, i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m);
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-34575478-22', 'auto');
+ga('send', 'pageview');
+</script>
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "17793284" });
+(function () {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+</script>
+
+ <noscript>
+<img src="https://autopro.com.vn/b.scorecardresearch.com/p.gif" />
+</noscript>
+
+<meta id="fbImage" property="og:image" content="https://kenh14.mediacdn.vn/channel-icon/auto-1200x630.jpg" />
+<script type="text/javascript">
+var _ADM_Channel = '%2fhome%2f'
+</script>
+
+
+
+
+
+  
+
+
+<style>
+#VID_taskbar{ display: none !important;}
+</style>
+</head>
+<body>
+
+
+<script type="text/javascript" src="https://media1.admicro.vn/core/admcore.js" async></script>
+<script type="text/javascript">
+
+var admicroAD = admicroAD || {};
+admicroAD.unit = admicroAD.unit || [];
+
+</script>
+<form method="post" action="https://autopro.com.vn/Default.aspx?isCache=1&amp;secretkey=autopro.com.vn" id="frmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTMyMjAyNTg0MGRkv1Ew3jMpU+kNkaXREX57zXyKq+k=" />
+</div>
+
+<div id="admWrapsite">
+
+
+<div id="admzone13610"></div>
+<script>
+admicroAD.unit.push(function () { admicroAD.show('admzone13610') });
+</script>
+
+
+
+<div class="wrapper-body clearfix">
+
+
+
+<div class="top">
+<div class="wrapper">
+
+
+<div id="admzone77"></div>
+<script>
+admicroAD.unit.push(function () { admicroAD.show('admzone77') });
+</script>
+
+<div class="logo-search">
+<h1><a href='https://autopro.com.vn/autopro_com_default.html' class='logo sprite' title='Kênh thông tin ô tô, xe hơi, xe máy độ, lái xe ô tô'></a></h1>
+
+
+<div class="box-search">
+<input type="text" placeholder="Tìm kiếm tin bài" id="search_keyword" />
+<input type="button" class="sprite" value="Tìm kiếm" id="btnSearch" />
+</div>
+
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+
+<div class="menu">
+<div class="wrapper">
+<ul class="root">
+<li id="ttrangchu"><a href="https://autopro.com.vn/autopro_com_default.html" class="txemayx">Trang chủ</a></li>
+<li id="tvideo"><a href="https://autopro.com.vn/video.chn" class="txemayx">Video</a></li>
+<li id="h24"><a href="https://autopro.com.vn/tin-tuc.chn" class="txemayx">Tin tức</a></li>
+<li id="h38"><a href="https://autopro.com.vn/danh-gia-xe.chn" class="txemayx">Đánh giá xe</a></li>
+<li id="h22"><a href="https://autopro.com.vn/van-hoa-xe.chn" class="txemayx">Văn hóa xe</a></li>
+<li id="h49"><a href="https://autopro.com.vn/ky-thuat-tu-van.chn" class="txemayx">Kỹ thuật và tư vấn</a></li>
+<li id="txm"><a href="https://autopro.com.vn/xe-may.chn" id="txemay">Xe máy</a></li>
+
+<li id="txthethao"><a href="https://autopro.com.vn/ngoai-hang-anh.chn" class="txemayx">Ngoại hạng Anh</a></li>
+</ul>
+<div class="clear">
+</div>
+</div>
+<div class="content-menu">
+<div class="wrapper">
+
+<span class="date-time">Cập nhật
+
+12:31 PM, Thứ tư Ngày 22, Tháng 11, 2017
+</span>
+
+</div>
+</div>
+</div>
+
+
+<div class="middle">
+<div class="wrapper content-border wrapper-details">
+
+<div class="col-left">
+<div class="slide">
+<input type="hidden" name="hfListNewsId" id="hfListNewsId" value="2017112210590615,20171122081112869,20171121170912728,20171121234202697,20171122072354587," />
+
+<div class="newshot">
+<div data-boxtype="homenewsposition" id="noibatinfo" subtitlemain="" linkmain='/o-to-cu-gia-sieu-re-tai-viet-nam-de-ruoc-hoa-vao-than-2017112210590615.chn' sapomain='Trong thời gian gần đây, không khó để tìm được những tin rao bán ô tô cũ giá dưới 100 triệu đồng trên mạng. Tuy nhiên, không phải ai cũng có thể săn được xe an toàn.' titlemain='Ô tô cũ giá siêu rẻ tại Việt Nam: Dễ rước họa vào thân' anhchinhmain='https://autopro56.mediacdn.vn/zoom/650_365/2017/img4396-1511322261455-137-0-665-940-crop-1511322299603.jpg'>
+<a href='https://autopro.com.vn/o-to-cu-gia-sieu-re-tai-viet-nam-de-ruoc-hoa-vao-than-2017112210590615.chn' id="noibatlink" title='Ô tô cũ giá siêu rẻ tại Việt Nam: Dễ rước họa vào thân' data-adr="h1-2017112210590615">
+<img onload="t_image = new Date().getTime();" width="650" height="365" src='https://autopro56.mediacdn.vn/zoom/650_365/2017/img4396-1511322261455-137-0-665-940-crop-1511322299603.jpg' data-test='Avatar2' id="noibatanh" alt='Ô tô cũ giá siêu rẻ tại Việt Nam: Dễ rước họa vào thân' title='Ô tô cũ giá siêu rẻ tại Việt Nam: Dễ rước họa vào thân' />
+<script>t_after_image = new Date().getTime();</script>
+</a>
+<div class="clear"></div>
+<div class="newshot-info">
+<div class="noibathome-subtitle"></div>
+<h2><a data-linktype="newsdetail" data-id='2017112210590615' data-adr="h1-2017112210590615" title='Ô tô cũ giá siêu rẻ tại Việt Nam: Dễ rước họa vào thân' href='https://autopro.com.vn/o-to-cu-gia-sieu-re-tai-viet-nam-de-ruoc-hoa-vao-than-2017112210590615.chn' id="linknoibathome"><span id="noibattieude">Ô tô cũ giá siêu rẻ tại Việt Nam: Dễ rước họa vào thân</span></a></h2>
+<p><a title='Trong thời gian gần đây, không khó để tìm được những tin rao bán ô tô cũ giá dưới 100 triệu đồng trên mạng. Tuy nhiên, không phải ai cũng có thể săn được xe an toàn.' href='https://autopro.com.vn/o-to-cu-gia-sieu-re-tai-viet-nam-de-ruoc-hoa-vao-than-2017112210590615.chn' id="A2"><span id="noibatsapo">Trong thời gian gần đây, không khó để tìm được những tin rao bán ô tô cũ giá dưới 100 triệu đồng trên mạng. Tuy nhiên, không phải ai cũng có thể săn được xe an toàn.</span></a></p>
+</div>
+</div>
+</div>
+
+<div class="fragment4bai">
+
+<div data-boxtype="homenewsposition" subtitle='' subtitle-url="" link='/dan-em-cua-hyundai-grand-i10-lan-dau-lo-dien-20171122081112869.chn' sapo='Đây sẽ là sản phẩm thay thế Hyundai i10 cũ, khoả lấp chỗ trống mà Hyundai tạo ra cách đây cách đây 2 năm.' titlecon='“Đàn em” của Hyundai Grand i10 lần đầu lộ diện' anhchinh='https://autopro56.mediacdn.vn/zoom/650_365/2017/3-1511312978704-57-0-632-1024-crop-1511312991840.jpg' class="item-hover" id='89779'>
+<a data-linktype="newsdetail" data-id='20171122081112869' data-adr="h1-20171122081112869" href='https://autopro.com.vn/dan-em-cua-hyundai-grand-i10-lan-dau-lo-dien-20171122081112869.chn' title='“Đàn em” của Hyundai Grand i10 lần đầu lộ diện'>
+<img width="140" height="93" data-test='Avatar2' alt='“Đàn em” của Hyundai Grand i10 lần đầu lộ diện' src='https://autopro56.mediacdn.vn/zoom/140_93/2017/3-1511312978704-57-0-632-1024-crop-1511312991840.jpg'>
+</a>
+<h3><a data-linktype="newsdetail" data-id='20171122081112869' data-adr="h1-20171122081112869" href='https://autopro.com.vn/dan-em-cua-hyundai-grand-i10-lan-dau-lo-dien-20171122081112869.chn' title='“Đàn em” của Hyundai Grand i10 lần đầu lộ diện'>“Đàn em” của Hyundai Grand i10 lần đầu lộ diện</a></h3>
+</div>
+<div class="vertical-line-noibat"></div>
+
+<div data-boxtype="homenewsposition" subtitle='' subtitle-url="" link='/sieu-xe-ferrari-488-moi-san-sang-cho-ngay-ra-mat-20171121170912728.chn' sapo='Những chiếc Ferrari 488 phiên bản mới sẽ được trang bị động cơ V8, công suất không dưới 700 mã lực.' titlecon='Siêu xe Ferrari 488 mới sẵn sàng cho ngày ra mắt' anhchinh='https://autopro56.mediacdn.vn/zoom/650_365/2017/2018-ferrari-488-gto-spy-photo-1-1511258598604-0-131-1005-1920-crop-1511258639528.jpg' class="item-hover" id='89780'>
+<a data-linktype="newsdetail" data-id='20171121170912728' data-adr="h1-20171121170912728" href='https://autopro.com.vn/sieu-xe-ferrari-488-moi-san-sang-cho-ngay-ra-mat-20171121170912728.chn' title='Siêu xe Ferrari 488 mới sẵn sàng cho ngày ra mắt'>
+<img width="140" height="93" data-test='Avatar2' alt='Siêu xe Ferrari 488 mới sẵn sàng cho ngày ra mắt' src='https://autopro56.mediacdn.vn/zoom/140_93/2017/2018-ferrari-488-gto-spy-photo-1-1511258598604-0-131-1005-1920-crop-1511258639528.jpg'>
+</a>
+<h3><a data-linktype="newsdetail" data-id='20171121170912728' data-adr="h1-20171121170912728" href='https://autopro.com.vn/sieu-xe-ferrari-488-moi-san-sang-cho-ngay-ra-mat-20171121170912728.chn' title='Siêu xe Ferrari 488 mới sẵn sàng cho ngày ra mắt'>Siêu xe Ferrari 488 mới sẵn sàng cho ngày ra mắt</a></h3>
+</div>
+<div class="vertical-line-noibat"></div>
+
+<div data-boxtype="homenewsposition" subtitle='' subtitle-url="" link='/aston-martin-vantage-2019-pha-bo-gioi-han-trong-thiet-ke-20171121234202697.chn' sapo='Chưa một mẫu xe thể thao Aston Martin nào gần đây có sự phá cách trong thiết kế như Vantage 2019.' titlecon='Aston Martin Vantage 2019 phá bỏ giới hạn trong thiết kế' anhchinh='https://autopro56.mediacdn.vn/zoom/650_365/2017/astonmartinvantage41-1511282034644-225-0-1066-1498-crop-1511282138784.jpg' class="item-hover" id='89781'>
+<a data-linktype="newsdetail" data-id='20171121234202697' data-adr="h1-20171121234202697" href='https://autopro.com.vn/aston-martin-vantage-2019-pha-bo-gioi-han-trong-thiet-ke-20171121234202697.chn' title='Aston Martin Vantage 2019 phá bỏ giới hạn trong thiết kế'>
+<img width="140" height="93" data-test='Avatar2' alt='Aston Martin Vantage 2019 phá bỏ giới hạn trong thiết kế' src='https://autopro56.mediacdn.vn/zoom/140_93/2017/astonmartinvantage41-1511282034644-225-0-1066-1498-crop-1511282138784.jpg'>
+</a>
+<h3><a data-linktype="newsdetail" data-id='20171121234202697' data-adr="h1-20171121234202697" href='https://autopro.com.vn/aston-martin-vantage-2019-pha-bo-gioi-han-trong-thiet-ke-20171121234202697.chn' title='Aston Martin Vantage 2019 phá bỏ giới hạn trong thiết kế'>Aston Martin Vantage 2019 phá bỏ giới hạn trong thiết kế</a></h3>
+</div>
+<div class="vertical-line-noibat"></div>
+
+<div data-boxtype="homenewsposition" subtitle='' subtitle-url="" link='/toyota-va-bai-toan-xe-nhap-re-hon-xe-lap-rap-20171122072354587.chn' sapo='“Giảm chi phí ngay lập tức hoặc xe lắp ráp sẽ phải đối mặt với tương lai u ám”, Toyota cảnh báo.' titlecon='Toyota và bài toán xe nhập rẻ hơn xe lắp ráp' anhchinh='https://autopro56.mediacdn.vn/zoom/650_365/2017/t1-1511309629324-41-0-715-1200-crop-1511309644919.jpg' class="item-hover" id='89790'>
+<a data-linktype="newsdetail" data-id='20171122072354587' data-adr="h1-20171122072354587" href='https://autopro.com.vn/toyota-va-bai-toan-xe-nhap-re-hon-xe-lap-rap-20171122072354587.chn' title='Toyota và bài toán xe nhập rẻ hơn xe lắp ráp'>
+<img width="140" height="93" data-test='Avatar2' alt='Toyota và bài toán xe nhập rẻ hơn xe lắp ráp' src='https://autopro56.mediacdn.vn/zoom/140_93/2017/t1-1511309629324-41-0-715-1200-crop-1511309644919.jpg'>
+</a>
+<h3><a data-linktype="newsdetail" data-id='20171122072354587' data-adr="h1-20171122072354587" href='https://autopro.com.vn/toyota-va-bai-toan-xe-nhap-re-hon-xe-lap-rap-20171122072354587.chn' title='Toyota và bài toán xe nhập rẻ hơn xe lắp ráp'>Toyota và bài toán xe nhập rẻ hơn xe lắp ráp</a></h3>
+</div>
+<div class="vertical-line-noibat"></div>
+
+</div>
+
+<div class="hr-bottom"></div>
+<div class="clear"></div>
+</div>
+<div class="adv-home">
+
+
+<div id="admzone81"></div>
+<script>
+admicroAD.unit.push(function () { admicroAD.show('admzone81') });
+</script>
+
+
+</div>
+
+<div class="thudanhgiaxe" data-marked-zoneid ="autopro_home_b1">
+<h2 class="sprite">
+<a id="lnkdanhgiaxe" title="Bài hay" href="https://autopro.com.vn/danh-gia-xe.chn">TIN HAY</a>
+<div class="jcarousel-scroll">
+<a id="next-slide-small" class="next sprite" href="https://autopro.com.vn/autopro_com_default.html#"></a><a id="prev-slide-small" class="prev sprite" href="https://autopro.com.vn/autopro_com_default.html#"></a>
+<div id="pager-slide-small" class="pager"></div>
+<div class="clear"></div>
+</div>
+</h2>
+<div class="list_carousel">
+<ul id='slide-small'><li><div class='list-item'><div class='item'><a title='SUV hạng sang Lexus LX570 đi 2 năm bán lại bằng giá xe mới tại Hà Nội' href='https://autopro.com.vn/suv-hang-sang-lexus-lx570-di-2-nam-ban-lai-bang-gia-xe-moi-tai-ha-noi-20171121174359619.chn' data-adr='h2-20171121174359619' ><img alt='SUV hạng sang Lexus LX570 đi 2 năm bán lại bằng giá xe mới tại Hà Nội' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/img0330-copy-1511258107371-0-0-959-1440-crop-1511258204041.jpg' title='SUV hạng sang Lexus LX570 đi 2 năm bán lại bằng giá xe mới tại Hà Nội' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171121174359619' title='SUV hạng sang Lexus LX570 đi 2 năm bán lại bằng giá xe mới tại Hà Nội' href='https://autopro.com.vn/suv-hang-sang-lexus-lx570-di-2-nam-ban-lai-bang-gia-xe-moi-tai-ha-noi-20171121174359619.chn' data-adr='h2-20171121174359619' >SUV hạng sang Lexus LX570 đi 2 năm bán lại bằng giá xe mới tại Hà Nội</a></h3></div><div class='item'><a title='Hyundai Grand i10 hạ giá xuống 315 triệu đồng' href='https://autopro.com.vn/hyundai-grand-i10-ha-gia-xuong-315-trieu-dong-20171121131734587.chn' data-adr='h2-20171121131734587' ><img alt='Hyundai Grand i10 hạ giá xuống 315 triệu đồng' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/grand-i10-4-1511245116393-0-0-1333-2000-crop-1511245121289.jpg' title='Hyundai Grand i10 hạ giá xuống 315 triệu đồng' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171121131734587' title='Hyundai Grand i10 hạ giá xuống 315 triệu đồng' href='https://autopro.com.vn/hyundai-grand-i10-ha-gia-xuong-315-trieu-dong-20171121131734587.chn' data-adr='h2-20171121131734587' >Hyundai Grand i10 hạ giá xuống 315 triệu đồng</a></h3></div><div class='item'><a title='SUV 7 chỗ tầm giá 800 triệu đồng: giảm giá mạnh nhưng vẫn ế' href='https://autopro.com.vn/suv-7-cho-tam-gia-800-trieu-dong-giam-gia-manh-nhung-van-e-20171121121616947.chn' data-adr='h2-20171121121616947' ><img alt='SUV 7 chỗ tầm giá 800 triệu đồng: giảm giá mạnh nhưng vẫn ế' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/chevrolet-captiva-revv-2016-1511240814338-0-0-552-828-crop-1511240835625.jpg' title='SUV 7 chỗ tầm giá 800 triệu đồng: giảm giá mạnh nhưng vẫn ế' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171121121616947' title='SUV 7 chỗ tầm giá 800 triệu đồng: giảm giá mạnh nhưng vẫn ế' href='https://autopro.com.vn/suv-7-cho-tam-gia-800-trieu-dong-giam-gia-manh-nhung-van-e-20171121121616947.chn' data-adr='h2-20171121121616947' >SUV 7 chỗ tầm giá 800 triệu đồng: giảm giá mạnh nhưng vẫn ế</a></h3></div><div class='item'><a title='Thêm 70 triệu đồng, khách hàng nhận được gì từ Mazda CX-5 2018?' href='https://autopro.com.vn/them-70-trieu-dong-khach-hang-nhan-duoc-gi-tu-mazda-cx-5-2018-20171121011243446.chn' data-adr='h2-20171121011243446' ><img alt='Thêm 70 triệu đồng, khách hàng nhận được gì từ Mazda CX-5 2018?' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/dscf0109-1511023704558-1511220593182-0-0-426-640-crop-1511220600360.jpg' title='Thêm 70 triệu đồng, khách hàng nhận được gì từ Mazda CX-5 2018?' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171121011243446' title='Thêm 70 triệu đồng, khách hàng nhận được gì từ Mazda CX-5 2018?' href='https://autopro.com.vn/them-70-trieu-dong-khach-hang-nhan-duoc-gi-tu-mazda-cx-5-2018-20171121011243446.chn' data-adr='h2-20171121011243446' >Thêm 70 triệu đồng, khách hàng nhận được gì từ Mazda CX-5 2018?</a></h3></div><div class='item'><a title='SUV 7 chỗ hạng sang Mercedes GL500 4MATIC cũ rao bán giá 3,7 tỷ đồng tại Hà Nội' href='https://autopro.com.vn/suv-7-cho-hang-sang-mercedes-gl500-4matic-cu-rao-ban-gia-37-ty-dong-tai-ha-noi-20171120170659227.chn' data-adr='h2-20171120170659227' ><img alt='SUV 7 chỗ hạng sang Mercedes GL500 4MATIC cũ rao bán giá 3,7 tỷ đồng tại Hà Nội' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/img0222-copy-1511169664788-35-66-924-1399-crop-1511169813075.jpg' title='SUV 7 chỗ hạng sang Mercedes GL500 4MATIC cũ rao bán giá 3,7 tỷ đồng tại Hà Nội' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171120170659227' title='SUV 7 chỗ hạng sang Mercedes GL500 4MATIC cũ rao bán giá 3,7 tỷ đồng...' href='https://autopro.com.vn/suv-7-cho-hang-sang-mercedes-gl500-4matic-cu-rao-ban-gia-37-ty-dong-tai-ha-noi-20171120170659227.chn' data-adr='h2-20171120170659227' >SUV 7 chỗ hạng sang Mercedes GL500 4MATIC cũ rao bán giá 3,7 tỷ đồng...</a></h3></div><div class='item'><a title='Giảm 50 triệu đồng, Nissan Sunny XV là sedan hạng B rẻ nhất Việt Nam' href='https://autopro.com.vn/giam-50-trieu-dong-nissan-sunny-xv-la-sedan-hang-b-re-nhat-viet-nam-20171120151826228.chn' data-adr='h2-20171120151826228' ><img alt='Giảm 50 triệu đồng, Nissan Sunny XV là sedan hạng B rẻ nhất Việt Nam' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/img-7100-1500779370478-1511165820763-0-0-426-640-crop-1511165882372.jpg' title='Giảm 50 triệu đồng, Nissan Sunny XV là sedan hạng B rẻ nhất Việt Nam' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171120151826228' title='Giảm 50 triệu đồng, Nissan Sunny XV là sedan hạng B rẻ nhất Việt Nam' href='https://autopro.com.vn/giam-50-trieu-dong-nissan-sunny-xv-la-sedan-hang-b-re-nhat-viet-nam-20171120151826228.chn' data-adr='h2-20171120151826228' >Giảm 50 triệu đồng, Nissan Sunny XV là sedan hạng B rẻ nhất Việt Nam</a></h3></div></div></li><li><div class='list-item'><div class='item'><a title='Gói i-Activsense khiến Mazda CX-5 2018 an toàn hơn các đối thủ như thế nào?' href='https://autopro.com.vn/goi-i-activsense-khien-mazda-cx-5-2018-an-toan-hon-cac-doi-thu-nhu-the-nao-20171120120650559.chn' data-adr='h2-20171120120650559' ><img alt='Gói i-Activsense khiến Mazda CX-5 2018 an toàn hơn các đối thủ như thế nào?' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/i-activsense-mazda-cx-5-vn-7-1511154070027-0-78-281-500-crop-1511154091265.gif' title='Gói i-Activsense khiến Mazda CX-5 2018 an toàn hơn các đối thủ như thế nào?' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171120120650559' title='Gói i-Activsense khiến Mazda CX-5 2018 an toàn hơn các đối thủ như thế...' href='https://autopro.com.vn/goi-i-activsense-khien-mazda-cx-5-2018-an-toan-hon-cac-doi-thu-nhu-the-nao-20171120120650559.chn' data-adr='h2-20171120120650559' >Gói i-Activsense khiến Mazda CX-5 2018 an toàn hơn các đối thủ như thế...</a></h3></div><div class='item'><a title='[Infographic] So sánh Mazda CX-5 và Honda CR-V bản cao cấp nhất vừa ra mắt tại Việt Nam' href='https://autopro.com.vn/infographic-so-sanh-mazda-cx-5-va-honda-cr-v-ban-cao-cap-nhat-vua-ra-mat-tai-viet-nam-20171119230347868.chn' data-adr='h2-20171119230347868' ><img alt='[Infographic] So sánh Mazda CX-5 và Honda CR-V bản cao cấp nhất vừa ra mắt tại Việt Nam' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/ava2-1511164393228-0-0-761-1142-crop-1511164397972.jpg' title='[Infographic] So sánh Mazda CX-5 và Honda CR-V bản cao cấp nhất vừa ra mắt tại Việt Nam' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171119230347868' title='[Infographic] So sánh Mazda CX-5 và Honda CR-V bản cao cấp nhất vừa ra...' href='https://autopro.com.vn/infographic-so-sanh-mazda-cx-5-va-honda-cr-v-ban-cao-cap-nhat-vua-ra-mat-tai-viet-nam-20171119230347868.chn' data-adr='h2-20171119230347868' >[Infographic] So sánh Mazda CX-5 và Honda CR-V bản cao cấp nhất vừa ra...</a></h3></div><div class='item'><a title='“Toyota giữ giá” sắp trở thành dĩ vãng tại Việt Nam?' href='https://autopro.com.vn/toyota-giu-gia-sap-tro-thanh-di-vang-tai-viet-nam-2017111801195312.chn' data-adr='h2-2017111801195312' ><img alt='“Toyota giữ giá” sắp trở thành dĩ vãng tại Việt Nam?' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/toyota-cu-gia-re-3-1510942022114-16-0-549-800-crop-1510942065585.jpg' title='“Toyota giữ giá” sắp trở thành dĩ vãng tại Việt Nam?' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='2017111801195312' title='“Toyota giữ giá” sắp trở thành dĩ vãng tại Việt Nam?' href='https://autopro.com.vn/toyota-giu-gia-sap-tro-thanh-di-vang-tai-viet-nam-2017111801195312.chn' data-adr='h2-2017111801195312' >“Toyota giữ giá” sắp trở thành dĩ vãng tại Việt Nam?</a></h3></div><div class='item'><a title='Toyota Innova vừa mới về Việt Nam bị cắt nhiều trang bị' href='https://autopro.com.vn/toyota-innova-vua-moi-ve-viet-nam-bi-cat-nhieu-trang-bi-201711182323387.chn' data-adr='h2-201711182323387' ><img alt='Toyota Innova vừa mới về Việt Nam bị cắt nhiều trang bị' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/img0188-1511021005582-87-14-1039-1442-crop-1511021027164.jpg' title='Toyota Innova vừa mới về Việt Nam bị cắt nhiều trang bị' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='201711182323387' title='Toyota Innova vừa mới về Việt Nam bị cắt nhiều trang bị' href='https://autopro.com.vn/toyota-innova-vua-moi-ve-viet-nam-bi-cat-nhieu-trang-bi-201711182323387.chn' data-adr='h2-201711182323387' >Toyota Innova vừa mới về Việt Nam bị cắt nhiều trang bị</a></h3></div><div class='item'><a title='Chi tiết Mazda CX-5 2018 bán ra tháng 12, giảm giá tháng 1/2018' href='https://autopro.com.vn/chi-tiet-mazda-cx-5-2018-ban-ra-thang-12-giam-gia-thang-1-2018-20171119002303247.chn' data-adr='h2-20171119002303247' ><img alt='Chi tiết Mazda CX-5 2018 bán ra tháng 12, giảm giá tháng 1/2018' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/dscf0111-1511023704556-0-0-1333-2000-crop-1511024084006.jpg' title='Chi tiết Mazda CX-5 2018 bán ra tháng 12, giảm giá tháng 1/2018' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171119002303247' title='Chi tiết Mazda CX-5 2018 bán ra tháng 12, giảm giá tháng 1/2018' href='https://autopro.com.vn/chi-tiet-mazda-cx-5-2018-ban-ra-thang-12-giam-gia-thang-1-2018-20171119002303247.chn' data-adr='h2-20171119002303247' >Chi tiết Mazda CX-5 2018 bán ra tháng 12, giảm giá tháng 1/2018</a></h3></div><div class='item'><a title='Cận cảnh Toyota Innova Venturer 2017 giá 855 triệu đồng tại Việt Nam' href='https://autopro.com.vn/can-canh-toyota-innova-venturer-2017-gia-855-trieu-dong-tai-viet-nam-20171118151941966.chn' data-adr='h2-20171118151941966' ><img alt='Cận cảnh Toyota Innova Venturer 2017 giá 855 triệu đồng tại Việt Nam' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/img9798-copy-1510990303376-25-55-905-1375-crop-1510990384000.jpg' title='Cận cảnh Toyota Innova Venturer 2017 giá 855 triệu đồng tại Việt Nam' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171118151941966' title='Cận cảnh Toyota Innova Venturer 2017 giá 855 triệu đồng tại Việt Nam' href='https://autopro.com.vn/can-canh-toyota-innova-venturer-2017-gia-855-trieu-dong-tai-viet-nam-20171118151941966.chn' data-adr='h2-20171118151941966' >Cận cảnh Toyota Innova Venturer 2017 giá 855 triệu đồng tại Việt Nam</a></h3></div></div></li><li><div class='list-item'><div class='item'><a title='Giá lăn bánh các phiên bản của Mazda CX-5 2018 tại Việt Nam' href='https://autopro.com.vn/gia-lan-banh-cac-phien-ban-cua-mazda-cx-5-2018-tai-viet-nam-201711181303297.chn' data-adr='h2-201711181303297' ><img alt='Giá lăn bánh các phiên bản của Mazda CX-5 2018 tại Việt Nam' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/23667182101558884837485011371307817n-1510976697854-1510984564597-68-99-426-636-crop-1510984587010.jpg' title='Giá lăn bánh các phiên bản của Mazda CX-5 2018 tại Việt Nam' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='201711181303297' title='Giá lăn bánh các phiên bản của Mazda CX-5 2018 tại Việt Nam' href='https://autopro.com.vn/gia-lan-banh-cac-phien-ban-cua-mazda-cx-5-2018-tai-viet-nam-201711181303297.chn' data-adr='h2-201711181303297' >Giá lăn bánh các phiên bản của Mazda CX-5 2018 tại Việt Nam</a></h3></div><div class='item'><a title='Đấu Honda CR-V, Mazda CX-5 mới ra mắt Việt Nam, giá cao nhất 989 triệu đồng' href='https://autopro.com.vn/dau-honda-cr-v-mazda-cx-5-moi-ra-mat-viet-nam-gia-cao-nhat-989-trieu-dong-20171117232455198.chn' data-adr='h2-20171117232455198' ><img alt='Đấu Honda CR-V, Mazda CX-5 mới ra mắt Việt Nam, giá cao nhất 989 triệu đồng' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/23667057101558884631335011774512545n-1510975869600-0-0-640-960-crop-1510975877736.jpg' title='Đấu Honda CR-V, Mazda CX-5 mới ra mắt Việt Nam, giá cao nhất 989 triệu đồng' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171117232455198' title='Đấu Honda CR-V, Mazda CX-5 mới ra mắt Việt Nam, giá cao nhất 989 triệu...' href='https://autopro.com.vn/dau-honda-cr-v-mazda-cx-5-moi-ra-mat-viet-nam-gia-cao-nhat-989-trieu-dong-20171117232455198.chn' data-adr='h2-20171117232455198' >Đấu Honda CR-V, Mazda CX-5 mới ra mắt Việt Nam, giá cao nhất 989 triệu...</a></h3></div><div class='item'><a title='Người dùng đánh giá Honda CR-V 7 chỗ như thế nào?' href='https://autopro.com.vn/nguoi-dung-danh-gia-honda-cr-v-7-cho-nhu-the-nao-2017111807230112.chn' data-adr='h2-2017111807230112' ><img alt='Người dùng đánh giá Honda CR-V 7 chỗ như thế nào?' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/screen-shot-2017-11-18-at-71926-am-1510964384920-0-0-734-1102-crop-1510964403417.png' title='Người dùng đánh giá Honda CR-V 7 chỗ như thế nào?' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='2017111807230112' title='Người dùng đánh giá Honda CR-V 7 chỗ như thế nào?' href='https://autopro.com.vn/nguoi-dung-danh-gia-honda-cr-v-7-cho-nhu-the-nao-2017111807230112.chn' data-adr='h2-2017111807230112' >Người dùng đánh giá Honda CR-V 7 chỗ như thế nào?</a></h3></div><div class='item'><a title='Toyota Highlander LE 2017 màu độc, lên đồ bản Limited giá 3 tỷ tại Việt Nam' href='https://autopro.com.vn/toyota-highlander-le-2017-mau-doc-len-do-ban-limited-gia-3-ty-tai-viet-nam-20171117161654448.chn' data-adr='h2-20171117161654448' ><img alt='Toyota Highlander LE 2017 màu độc, lên đồ bản Limited giá 3 tỷ tại Việt Nam' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/img9696-copy-1510907753264-116-88-958-1351-crop-1510907873577.jpg' title='Toyota Highlander LE 2017 màu độc, lên đồ bản Limited giá 3 tỷ tại Việt Nam' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171117161654448' title='Toyota Highlander LE 2017 màu độc, lên đồ bản Limited giá 3 tỷ tại...' href='https://autopro.com.vn/toyota-highlander-le-2017-mau-doc-len-do-ban-limited-gia-3-ty-tai-viet-nam-20171117161654448.chn' data-adr='h2-20171117161654448' >Toyota Highlander LE 2017 màu độc, lên đồ bản Limited giá 3 tỷ tại...</a></h3></div><div class='item'><a title='Những dòng xe thoát khỏi sức ì của thị trường dịp cuối năm tại Việt Nam' href='https://autopro.com.vn/nhung-dong-xe-thoat-e-dip-cuoi-nam-tai-viet-nam-20171117115423104.chn' data-adr='h2-20171117115423104' ><img alt='Những dòng xe thoát khỏi sức ì của thị trường dịp cuối năm tại Việt Nam' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/xe-ban-chay-1510893865122-0-20-639-979-crop-1510893880910.jpg' title='Những dòng xe thoát khỏi sức ì của thị trường dịp cuối năm tại Việt Nam' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171117115423104' title='Những dòng xe thoát khỏi sức ì của thị trường dịp cuối năm tại Việt...' href='https://autopro.com.vn/nhung-dong-xe-thoat-e-dip-cuoi-nam-tai-viet-nam-20171117115423104.chn' data-adr='h2-20171117115423104' >Những dòng xe thoát khỏi sức ì của thị trường dịp cuối năm tại Việt...</a></h3></div><div class='item'><a title='Hyperloop - Khoa học viễn tưởng hay tương lai của ngành vận tải?' href='https://autopro.com.vn/hyperloop-khoa-hoc-vien-tuong-hay-tuong-lai-cua-nganh-van-tai-20171117090116166.chn' data-adr='h2-20171117090116166' ><img alt='Hyperloop - Khoa học viễn tưởng hay tương lai của ngành vận tải?' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/animation-1-1510883479350-0-28-251-405-crop-1510883559419.gif' title='Hyperloop - Khoa học viễn tưởng hay tương lai của ngành vận tải?' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171117090116166' title='Hyperloop - Khoa học viễn tưởng hay tương lai của ngành vận tải?' href='https://autopro.com.vn/hyperloop-khoa-hoc-vien-tuong-hay-tuong-lai-cua-nganh-van-tai-20171117090116166.chn' data-adr='h2-20171117090116166' >Hyperloop - Khoa học viễn tưởng hay tương lai của ngành vận tải?</a></h3></div></div></li><li><div class='list-item'><div class='item'><a title='Honda CR-V và Mazda CX-5: Thế cờ liệu có đảo ngược?' href='https://autopro.com.vn/honda-cr-v-va-mazda-cx-5-the-co-lieu-co-dao-nguoc-20171117022145838.chn' data-adr='h2-20171117022145838' ><img alt='Honda CR-V và Mazda CX-5: Thế cờ liệu có đảo ngược?' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/so-sanh-honda-cr-v-va-mazda-cx-5-2017-1510859729500-0-0-679-1018-crop-1510859749643.jpg' title='Honda CR-V và Mazda CX-5: Thế cờ liệu có đảo ngược?' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171117022145838' title='Honda CR-V và Mazda CX-5: Thế cờ liệu có đảo ngược?' href='https://autopro.com.vn/honda-cr-v-va-mazda-cx-5-the-co-lieu-co-dao-nguoc-20171117022145838.chn' data-adr='h2-20171117022145838' >Honda CR-V và Mazda CX-5: Thế cờ liệu có đảo ngược?</a></h3></div><div class='item'><a title='Honda đã đánh mất mình và tìm cách quay lại thời kỳ hoàng kim như thế nào?' href='https://autopro.com.vn/honda-da-danh-mat-minh-va-tim-cach-quay-lai-thoi-ky-hoang-kim-nhu-the-nao-2017111702164665.chn' data-adr='h2-2017111702164665' ><img alt='Honda đã đánh mất mình và tìm cách quay lại thời kỳ hoàng kim như thế nào?' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/ava-ngang-1510861718009-0-0-500-750-crop-1510861732610.jpg' title='Honda đã đánh mất mình và tìm cách quay lại thời kỳ hoàng kim như thế nào?' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='2017111702164665' title='Honda đã đánh mất mình và tìm cách quay lại thời kỳ hoàng kim như thế...' href='https://autopro.com.vn/honda-da-danh-mat-minh-va-tim-cach-quay-lai-thoi-ky-hoang-kim-nhu-the-nao-2017111702164665.chn' data-adr='h2-2017111702164665' >Honda đã đánh mất mình và tìm cách quay lại thời kỳ hoàng kim như thế...</a></h3></div><div class='item'><a title='Mất bao lâu, Lamborghini mới bán được 1 xe tại Việt Nam?' href='https://autopro.com.vn/mat-bao-lau-lamborghini-moi-ban-duoc-1-xe-tai-viet-nam-201711161451356.chn' data-adr='h2-201711161451356' ><img alt='Mất bao lâu, Lamborghini mới bán được 1 xe tại Việt Nam?' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/22008268359690314473443468238234183017365n-copy-1510818400831-8-0-967-1440-crop-1510818433797.jpg' title='Mất bao lâu, Lamborghini mới bán được 1 xe tại Việt Nam?' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='201711161451356' title='Mất bao lâu, Lamborghini mới bán được 1 xe tại Việt Nam?' href='https://autopro.com.vn/mat-bao-lau-lamborghini-moi-ban-duoc-1-xe-tai-viet-nam-201711161451356.chn' data-adr='h2-201711161451356' >Mất bao lâu, Lamborghini mới bán được 1 xe tại Việt Nam?</a></h3></div><div class='item'><a title='Chưa ra mắt, Mazda CX-5 thế hệ mới đã nhận đặt cọc và có giá tạm tính' href='https://autopro.com.vn/chua-ra-mat-mazda-cx-5-the-he-moi-da-nhan-dat-coc-va-co-gia-tam-tinh-201711161112593.chn' data-adr='h2-201711161112593' ><img alt='Chưa ra mắt, Mazda CX-5 thế hệ mới đã nhận đặt cọc và có giá tạm tính' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/new-2017-mazda-cx-5-gs-skyactivawdheatedseatssteeringwheelbluetoothkeylessstart-edmontondealer-id885149946-1510805444681-22-98-1023-1600-crop-1510805473081.jpeg' title='Chưa ra mắt, Mazda CX-5 thế hệ mới đã nhận đặt cọc và có giá tạm tính' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='201711161112593' title='Chưa ra mắt, Mazda CX-5 thế hệ mới đã nhận đặt cọc và có giá tạm tính' href='https://autopro.com.vn/chua-ra-mat-mazda-cx-5-the-he-moi-da-nhan-dat-coc-va-co-gia-tam-tinh-201711161112593.chn' data-adr='h2-201711161112593' >Chưa ra mắt, Mazda CX-5 thế hệ mới đã nhận đặt cọc và có giá tạm tính</a></h3></div><div class='item'><a title='Cơ hội và thách thức của Yamaha R15 chính hãng tại Việt Nam' href='https://autopro.com.vn/co-hoi-va-thach-thuc-cua-yamaha-r15-chinh-hang-tai-viet-nam-20171115170133237.chn' data-adr='h2-20171115170133237' ><img alt='Cơ hội và thách thức của Yamaha R15 chính hãng tại Việt Nam' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/img8211-1510739542843-96-0-1056-1440-crop-1510739568813.jpg' title='Cơ hội và thách thức của Yamaha R15 chính hãng tại Việt Nam' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171115170133237' title='Cơ hội và thách thức của Yamaha R15 chính hãng tại Việt Nam' href='https://autopro.com.vn/co-hoi-va-thach-thuc-cua-yamaha-r15-chinh-hang-tai-viet-nam-20171115170133237.chn' data-adr='h2-20171115170133237' >Cơ hội và thách thức của Yamaha R15 chính hãng tại Việt Nam</a></h3></div><div class='item'><a title='Honda CR-V và 10 năm thăng trầm tại Việt Nam' href='https://autopro.com.vn/honda-cr-v-va-10-nam-thang-tram-tai-viet-nam-20171115163648581.chn' data-adr='h2-20171115163648581' ><img alt='Honda CR-V và 10 năm thăng trầm tại Việt Nam' src='https://autopro56.mediacdn.vn/zoom/100_80/2017/ngang-1510738232645-0-0-501-752-crop-1510738250821.jpg' title='Honda CR-V và 10 năm thăng trầm tại Việt Nam' width='100' height='80' /></a><h3><a data-linktype='newsdetail' data-id='20171115163648581' title='Honda CR-V và 10 năm thăng trầm tại Việt Nam' href='https://autopro.com.vn/honda-cr-v-va-10-nam-thang-tram-tai-viet-nam-20171115163648581.chn' data-adr='h2-20171115163648581' >Honda CR-V và 10 năm thăng trầm tại Việt Nam</a></h3></div></div></li></ul>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+
+
+<div class="list-news-home" data-marked-zoneid ="autopro_home_b1">
+<div class="title sprite">MỚI CẬP NHẬT</div>
+<div id="largeP">
+<div data-check-position="autopro_home_position_start"></div>
+
+
+<div class='news-item'><a href='https://autopro.com.vn/hyundai-accent-va-kia-rio-meo-nao-can-miu-nao-20171122090343291.chn' data-adr='h3-20171122090343291' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/hyundai-accent-kia-rio-graphic-1511314173455-0-0-437-656-crop-1511314180402.jpg' alt='Hyundai Accent và Kia Rio: Mèo nào cắn mỉu nào?' title='Hyundai Accent và Kia Rio: Mèo nào cắn mỉu nào?' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171122090343291' href='https://autopro.com.vn/hyundai-accent-va-kia-rio-meo-nao-can-miu-nao-20171122090343291.chn' data-adr='h3-20171122090343291' >Hyundai Accent và Kia Rio: Mèo nào cắn mỉu nào?</a></h2><p class='date-time'><a href='https://autopro.com.vn/ky-thuat-tu-van.chn'><b>Kỹ thuật & Tư vấn</b></a> | 22/11/2017 09:00</p><p>Khi xe cỡ nhỏ dần thoát khỏi hình bóng "xe cỏ" thì lựa chọn ngày càng khó hơn khi các đối thủ trực diện như Hyundai Accent và Kia Rio sở hữu nhiều ưu thế cạnh tranh quyết liệt.</p></div><div class='news-item'><a href='https://autopro.com.vn/suv-hang-sang-lexus-lx570-di-2-nam-ban-lai-bang-gia-xe-moi-tai-ha-noi-20171121174359619.chn' data-adr='h3-20171121174359619' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/img0330-copy-1511258107371-0-0-959-1440-crop-1511258204041.jpg' alt='SUV hạng sang Lexus LX570 đi 2 năm bán lại bằng giá xe mới tại Hà Nội' title='SUV hạng sang Lexus LX570 đi 2 năm bán lại bằng giá xe mới tại Hà Nội' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121174359619' href='https://autopro.com.vn/suv-hang-sang-lexus-lx570-di-2-nam-ban-lai-bang-gia-xe-moi-tai-ha-noi-20171121174359619.chn' data-adr='h3-20171121174359619' >SUV hạng sang Lexus LX570 đi 2 năm bán lại bằng giá xe mới tại Hà Nội</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 19:00</p><p>Sau hơn 2 năm sử dụng, chiếc Lexus LX570 2015 được chủ nhân rao bán lại giá hơn 5,3 tỷ đồng - tương đương với giá của mẫu xe này khi mua mới.</p></div><div class='news-item'><a href='https://autopro.com.vn/du-khach-nuoc-ngoai-hao-hung-cuoi-xe-minsk-dao-pho-ha-noi-20171120152809222.chn' data-adr='h3-20171120152809222' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/img0185-copy-1511237671382-43-0-1002-1440-crop-1511237741854.jpg' alt='Du khách nước ngoài hào hứng cưỡi xe Minsk dạo phố Hà Nội' title='Du khách nước ngoài hào hứng cưỡi xe Minsk dạo phố Hà Nội' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171120152809222' href='https://autopro.com.vn/du-khach-nuoc-ngoai-hao-hung-cuoi-xe-minsk-dao-pho-ha-noi-20171120152809222.chn' data-adr='h3-20171120152809222' >Du khách nước ngoài hào hứng cưỡi xe Minsk dạo phố Hà Nội</a></h2><p class='date-time'><a href='https://autopro.com.vn/van-hoa-xe.chn'><b>Văn hóa xe</b></a> | 21/11/2017 16:00</p><p>Minsk - Mẫu xe được mệnh danh là huyền thoại gắn liền với thời kì bao cấp tại Việt Nam mới đây đã có dịp tái xuất trên đường phố hiện đại khi một công ty du lịch ở Hà Nội quyết định sử dụng mẫu xe này làm phương tiện đưa đón khách.</p></div><div class='news-item'><a href='https://autopro.com.vn/xi-nhan-muon-o-to-hyundai-khien-xe-may-nga-giua-nga-tu-20171121150149369.chn' data-adr='h3-20171121150149369' ><img class='lazy' data-original='https://autopro56.mediacdn.vn/2017/animation-1511251151497-12-74-210-371-crop-1511251174785.gif' alt='Xi-nhan muộn, ô tô Hyundai khiến xe máy ngã giữa ngã tư' title='Xi-nhan muộn, ô tô Hyundai khiến xe máy ngã giữa ngã tư' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121150149369' href='https://autopro.com.vn/xi-nhan-muon-o-to-hyundai-khien-xe-may-nga-giua-nga-tu-20171121150149369.chn' data-adr='h3-20171121150149369' >Xi-nhan muộn, ô tô Hyundai khiến xe máy ngã giữa ngã tư</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 15:56</p><p>Việc xi-nhan muộn sẽ khiến phương tiện phía sau không kịp xử lý tình huống, dễ dẫn tới va chạm giao thông, gây hậu quả nghiêm trọng.</p></div><div class='news-item'><a href='https://autopro.com.vn/dua-cung-dai-gia-campuchia-dan-choi-viet-tau-sieu-pham-mclaren-720s-20171121131534462.chn' data-adr='h3-20171121131534462' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/2365936714681678433039884791016950473357264n-1511245138592-38-0-677-960-crop-1511245157775.jpg' alt='Đua cùng đại gia Campuchia, dân chơi Việt tậu siêu phẩm McLaren 720S' title='Đua cùng đại gia Campuchia, dân chơi Việt tậu siêu phẩm McLaren 720S' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121131534462' href='https://autopro.com.vn/dua-cung-dai-gia-campuchia-dan-choi-viet-tau-sieu-pham-mclaren-720s-20171121131534462.chn' data-adr='h3-20171121131534462' >Đua cùng đại gia Campuchia, dân chơi Việt tậu siêu phẩm McLaren 720S</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 13:38</p><p>Sáng nay (21/11) ở Sài Gòn, chiếc McLaren 720S đầu tiên tại Việt Nam đã được mở công với ngoại thất màu xám.</p></div><div class='news-item'><a href='https://autopro.com.vn/hyundai-grand-i10-ha-gia-xuong-315-trieu-dong-20171121131734587.chn' data-adr='h3-20171121131734587' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/grand-i10-4-1511245116393-0-0-1333-2000-crop-1511245121289.jpg' alt='Hyundai Grand i10 hạ giá xuống 315 triệu đồng' title='Hyundai Grand i10 hạ giá xuống 315 triệu đồng' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121131734587' href='https://autopro.com.vn/hyundai-grand-i10-ha-gia-xuong-315-trieu-dong-20171121131734587.chn' data-adr='h3-20171121131734587' >Hyundai Grand i10 hạ giá xuống 315 triệu đồng</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 13:37</p><p>Ngày 21/11, Hyundai Thành Công công bố giá bán lẻ năm 2018 cho mẫu Hyundai Grand i10 nhưng đã được áp dụng ngay từ hôm nay.</p></div><div class='news-item'><a href='https://autopro.com.vn/suv-7-cho-tam-gia-800-trieu-dong-giam-gia-manh-nhung-van-e-20171121121616947.chn' data-adr='h3-20171121121616947' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/chevrolet-captiva-revv-2016-1511240814338-0-0-552-828-crop-1511240835625.jpg' alt='SUV 7 chỗ tầm giá 800 triệu đồng: giảm giá mạnh nhưng vẫn ế' title='SUV 7 chỗ tầm giá 800 triệu đồng: giảm giá mạnh nhưng vẫn ế' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121121616947' href='https://autopro.com.vn/suv-7-cho-tam-gia-800-trieu-dong-giam-gia-manh-nhung-van-e-20171121121616947.chn' data-adr='h3-20171121121616947' >SUV 7 chỗ tầm giá 800 triệu đồng: giảm giá mạnh nhưng vẫn ế</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 12:35</p><p>Trong khi các mẫu SUV/crossover trong tầm tiền trên dưới một tỷ đồng vẫn có sức hút với khách hàng Việt thì nhiều đối thủ có giá mềm nhưng doanh số không mấy triển vọng.</p></div><div class='news-item'><a href='https://autopro.com.vn/gia-o-to-o-viet-nam-cao-gap-2-lan-thai-lan-indonesia-20171121121503166.chn' data-adr='h3-20171121121503166' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/20170606151624-o-to-indonesia-1-1511241164920-0-0-438-657-crop-1511241176157.jpg' alt='Giá ô tô ở Việt Nam cao gấp 2 lần Thái Lan, Indonesia' title='Giá ô tô ở Việt Nam cao gấp 2 lần Thái Lan, Indonesia' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121121503166' href='https://autopro.com.vn/gia-o-to-o-viet-nam-cao-gap-2-lan-thai-lan-indonesia-20171121121503166.chn' data-adr='h3-20171121121503166' >Giá ô tô ở Việt Nam cao gấp 2 lần Thái Lan, Indonesia</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 12:16</p><p>Theo Bộ Công Thương, đây hiện là một trong những hạn chế của ngành công nghiệp ô tô Việt Nam.</p></div><div class='news-item'><a href='https://autopro.com.vn/chay-thu-o-to-dien-va-tram-sac-nhanh-dau-tien-tai-viet-nam-20171121094037931.chn' data-adr='h3-20171121094037931' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/z828653107081406f9b80600863a1fe2342cdb5b94e61-1511231817714-166-0-1498-1998-crop-1511231844830.jpg' alt='Chạy thử ô tô điện và trạm sạc nhanh đầu tiên tại Việt Nam' title='Chạy thử ô tô điện và trạm sạc nhanh đầu tiên tại Việt Nam' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121094037931' href='https://autopro.com.vn/chay-thu-o-to-dien-va-tram-sac-nhanh-dau-tien-tai-viet-nam-20171121094037931.chn' data-adr='h3-20171121094037931' >Chạy thử ô tô điện và trạm sạc nhanh đầu tiên tại Việt Nam</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 11:30</p><p>Những chiếc ô tô điện i-MiEV và trạm sạc nhanh là kết quả của sự hợp tác giữa Mitsubishi Motors Việt Nam, Mitsubishi Electric và Tổng công ty Điện lực miền Trung.</p></div><div class='news-item'><a href='https://autopro.com.vn/porsche-panamera-sport-turismo-da-toi-dong-nam-a-20171121091332805.chn' data-adr='h3-20171121091332805' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/porsche-panamera-turbo-sport-turismo-malaysia-1511230046310-0-74-651-1050-crop-1511230056583.jpg' alt='Porsche Panamera Sport Turismo đã tới Đông Nam Á' title='Porsche Panamera Sport Turismo đã tới Đông Nam Á' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121091332805' href='https://autopro.com.vn/porsche-panamera-sport-turismo-da-toi-dong-nam-a-20171121091332805.chn' data-adr='h3-20171121091332805' >Porsche Panamera Sport Turismo đã tới Đông Nam Á</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 10:42</p><p>Tại Đông Nam Á, kiểu dáng wagon hay station wagon ít được ưa chuộng. Tuy nhiên, một chiếc Porsche Panamera Sport Turismo vừa được đưa về Malaysia.</p></div><div class='news-item'><a href='https://autopro.com.vn/kia-ban-xe-tren-facebook-bang-tri-tue-nhan-tao-2017112108190379.chn' data-adr='h3-2017112108190379' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/kia-ai-virtual-assistant-11-1511226973670-42-0-447-609-crop-1511226983923.jpg' alt='Kia bán xe trên Facebook bằng trí tuệ nhân tạo' title='Kia bán xe trên Facebook bằng trí tuệ nhân tạo' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='2017112108190379' href='https://autopro.com.vn/kia-ban-xe-tren-facebook-bang-tri-tue-nhan-tao-2017112108190379.chn' data-adr='h3-2017112108190379' >Kia bán xe trên Facebook bằng trí tuệ nhân tạo</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 09:29</p><p>Robot trả lời tự động (chatbot) của Kia được đặt tên là Kian, có thể phản hồi lại nhiều câu hỏi của khách hàng trên Facebook.</p></div><div class='news-item'><a href='https://autopro.com.vn/o-to-viet-nam-tu-cot-moc-1-1-2018-ba-song-do-ve-mot-be-20171121083608211.chn' data-adr='h3-20171121083608211' ><img src='https://autopro56.mediacdn.vn/zoom/240_160/2017/photo1511226768098-1511226768278-0-0-336-505-crop-1511227925573.jpg' alt='Ô tô Việt Nam từ cột mốc 1/1/2018: Ba sông đổ về một bể' title='Ô tô Việt Nam từ cột mốc 1/1/2018: Ba sông đổ về một bể' width='240' height='160' /></a><h2><a data-linktype='newsdetail' data-id='20171121083608211' href='https://autopro.com.vn/o-to-viet-nam-tu-cot-moc-1-1-2018-ba-song-do-ve-mot-be-20171121083608211.chn' data-adr='h3-20171121083608211' >Ô tô Việt Nam từ cột mốc 1/1/2018: Ba sông đổ về một bể</a></h2><p class='date-time'><a href='https://autopro.com.vn/tin-tuc.chn'><b>Tin tức</b></a> | 21/11/2017 08:37</p><p>Thị trường ô tô và ngành công nghiệp ô tô Việt Nam từ năm 2018 được dự báo là sẽ phải đối mặt với nhiều khó khăn.</p></div>
+<div data-check-position="autopro_home_position_end"></div>
+</div>
+<div class="news-home-viewmore">
+<a href="javascript:void(0);" id="getGetNewsUpdated">Xem tiếp >></a>
+</div>
+</div>
+
+
+<div class="clear"></div>
+</div>
+<div class="col-right">
+
+<div class="muachung">
+
+<div id="admzone24340"></div>
+<script>
+admicroAD.unit.push(function () { admicroAD.show('admzone24340') });
+</script>
+
+
+<div id="admzone78"></div>
+<script>
+admicroAD.unit.push(function () { admicroAD.show('admzone78') });
+</script>
+
+</div>
+<div class="admicro">
+
+<div id="admzone79"></div>
+<script>
+admicroAD.unit.push(function () { admicroAD.show('admzone79') });
+</script>
+
+
+</div>
+
+
+
+
+<div class="list-nguoidepvaxe" style="display:none">
+
+</div>
+
+
+  
+
+
+
+<div class="ads-list">
+
+<div id="admzone343"></div>
+<script>
+admicroAD.unit.push(function () { admicroAD.show('admzone343') });
+</script>
+
+</div>
+
+</div>
+<div class="clear"></div>
+
+</div>
+</div>
+
+
+
+</div>
+<div class="clearfix" id="adm_sticky_footer">
+</div>
+<div id="adm_sponsor_footer1"></div>
+
+<div class="main-home-adv">
+<div id="admzone1479"></div>
+<script>
+admicroAD.unit.push(function () { admicroAD.show('admzone1479') });
+</script>
+</div>
+
+<div class="clear">
+</div>
+
+
+<div class="bottom hide-on-loading">
+<div class="wrapper bg-white">
+<div class="link-website">
+
+</div>
+<div class="clear">
+</div>
+<div class="menu-bottom">
+<ul>
+<li><a href="https://autopro.com.vn/autopro_com_default.html">Trang chủ</a></li>
+<li><a href="https://autopro.com.vn/video.chn">Video</a></li>
+<li><a href="https://autopro.com.vn/tin-tuc.chn">Tin tức</a></li>
+<li><a href="https://autopro.com.vn/danh-gia-xe.chn">Đánh giá xe</a></li>
+<li><a href="https://autopro.com.vn/van-hoa-xe.chn">Văn hóa xe</a></li>
+<li><a href="https://autopro.com.vn/ky-thuat-tu-van.chn">Kỹ thuật và tư vấn</a></li>
+<li><a href="https://autopro.com.vn/xe-may.chn">Xe máy</a></li>
+<li><a href="https://autopro.com.vn/ngoai-hang-anh.chn">Ngoại Hạng Anh</a></li>
+<li><a href="https://autopro.com.vn/rss.chn">RSS</a></li>
+</ul>
+</div>
+<div class="clear">
+</div>
+<div class="footer-menu-items first">
+ <!-- <a rel="nofollow" target="_blank" title="Vccorp.vn - Công ty cổ phần truyền thông Việt Nam"
+href="http://www.vccorp.vn">
+<i class="sprite icologoVCCFoot"></i>
+</a> -->
+ <a rel="nofollow" href="https://www.vccorp.vn" title="Công ty Cổ phần VCCorp" target="_blank">
+<img src="https://autopro.com.vn/vccorp.mediacdn.vn/vccorp-m.png" alt="vccorp.vn" class="mb10">
+</a>
+<p>
+© Copyright 2008 - 2017 - <strong>Công ty Cổ phần VCCorp.</strong><br>
+Tầng 17, 19, 20, 21 Tòa nhà Center Building - Hapulico Complex, Số 1 Nguyễn Huy
+Tưởng, Thanh Xuân, Hà Nội.<br>
+Giấy phép số 3713/GP-TTĐT do Sở Thông tin và Truyền thông thành phố Hà Nội cấp ngày 30/11/2015.<br>
+Cục QL phát thanh, truyền hình và thông tin điện tử, Bộ thông tin và truyền thông.<br>
+</div>
+<div class="footer-menu-items second">
+Chịu trách nhiệm quản lý nội dung: Bà Nguyễn Bích Minh<br />
+Ban biên tập AutoPro, Tầng 21, Tòa nhà Center Building - Hapulico Complex, Số 1
+Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.<br>
+Điện thoại: 024-39743410 <span>Máy lẻ 286</span>. Fax: 024-39744082<br>
+Email: <a href="mailto:info@autopro.com.vn" rel="nofollow">info@autopro.com.vn</a><br>
+Ghi rõ nguồn "Autopro" khi phát hành lại thông tin từ cổng thông tin này.<br>
+</div>
+<div class="footer-menu-items last">
+Phòng quảng cáo Admicro<br>
+Hotline hỗ trợ quảng cáo: <br />0942 86 11 33<br/>
+Email: doanhnghiep@admicro.vn<br>
+Hỗ trợ &amp; CSKH<br>
+
+
+</div>
+<div class="clear">
+</div>
+</div>
+
+</div>
+
+
+
+<div id="VID_taskbar" class="VID_taskbar" rel="93ccf92c830076f395d99926641eaf07">
+</div>
+</div>
+<script async type="text/javascript" src="https://media1.admicro.vn/core/adm_tracking.js"></script>
+
+
+
+<!-- đếm số người vào -- tạm thời comment lại -->
+
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = 'd1aQm8bl.2MmwN9vqytckeVE7OlFCXfVyKoY9U1MTpL.37';
+// lines below shouldn't be edited
+function gemius_pending(i) { window[i] = window[i] || function () { var x = window[i + '_pdata'] = window[i + '_pdata'] || []; x[x.length] = arguments; }; }; gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event'); (function (d, t) { try { var gt = d.createElement(t), s = d.getElementsByTagName(t)[0], l = 'http' + ((location.protocol == 'https:') ? 's' : ''); gt.setAttribute('async', 'async'); gt.setAttribute('defer', 'defer'); gt.src = l + '://hc.viam.com.vn/xgemius.js'; s.parentNode.insertBefore(gt, s); } catch (e) { } })(document, 'script');
+//--><!]]>
+</script>
+
+</form>
+<script type="text/javascript">function b(){var a=document.createElement("script");a.src="/__browser_check/public/721092e.js";document.body.appendChild(a);var c=!1;a.onload=a.onreadystatechange=function(){if(!(c||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){c=!0;var d=document.createElement("script");d.src="/__browser_check/script.js";document.body.appendChild(d);a.onload=a.onreadystatechange=null}}}
+-1==document.cookie.indexOf("f942ca9=")&&(window.addEventListener?window.addEventListener("load",b,!1):window.attachEvent?window.attachEvent("onload",b):window.onload=b);</script>
+</body>
+</html><!--Created Cache: 11/22/2017 12:31:38 PM-->

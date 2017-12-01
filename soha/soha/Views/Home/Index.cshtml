@@ -1,0 +1,534 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    NewsRes item1 = ViewBag.it1 as NewsRes;
+    NewsRes item2 = ViewBag.it2 as NewsRes;
+    List<NewsRes> lst3News = ViewBag.it3 as List<NewsRes>;
+    List<NewsRes> lst4News = ViewBag.it4 as List<NewsRes>;
+
+    List<NewsRes> lst5News = ViewBag.it5 as List<NewsRes>;
+    List<NewsRes> lst6News = ViewBag.it6 as List<NewsRes>;
+}
+@using XRM.Business.DTO.Common
+<div class="main-container clearfix">
+    <div class="left-content clearfix">
+        <div class="groupleft clearfix" id="left-main-content">
+
+            <div data-check-position="soha_home_b1_start"></div>
+            <div class="box-special">
+                <ul class="list-special-news clearfix">
+                    @{
+                        <li data-boxtype="homenewsposition" class="item-special-new large" data-marked-zoneid="soha_home_b1">
+                            <a href="/Detail/@item1.TypeID/@item1.NewsID"  title="@item1.Title">
+                                <figure><img class='thumbs-img' onload="t_image = new Date().getTime();" title="@item1.Title" alt="@item1.Title" src="@item1.ImageTH" width="434" height="271" /><figcaption>@item1.Title</figcaption></figure>
+                                <script>t_after_image = new Date().getTime();</script>
+                            </a>
+                            <h3>
+                                <a href="/Detail/@item1.TypeID/@item1.NewsID" title="@item1.Title" class="title-special" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122110034697">@item1.Title</a>
+                            </h3>
+                            <p class='sapo-special-new mgb0'>@item1.ShortContent</p>
+                        </li>
+                        <li data-boxtype="homenewsposition" class="item-special-new small" data-marked-zoneid="soha_home_b1">
+                            <a href="/Detail/@item2.TypeID/@item2.NewsID" title="@item2.Title">
+                                <figure><img class='thumbs-img' onload="t_image = new Date().getTime();" title="@item2.Title" alt="@item2.Title" src="@item2.ImageTH" width="216" height="271" /><figcaption>@item2.Title</figcaption></figure>
+                                <script>t_after_image = new Date().getTime();</script>
+                            </a>
+                            <h3>
+                                <a href="/Detail/@item2.TypeID/@item2.NewsID" title="@item2.Title" class="title-special" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122101628619">@item2.Title</a>
+                            </h3>
+                        </li>
+                     }
+                </ul>
+            </div>
+            <div data-check-position="soha_home_b1_end"></div>
+
+            <div class="container-category" id="leftmedium">
+                <div data-check-position="soha_home_b2_start"></div>
+                <ul class="list-topic-cate bd0">
+                    <li class='item-news-cate clearfix pdt0 bdt0' data-marked-zoneid="soha_home_b2">
+                        <div id="slideMoiNhat" class="slide-list slide6-contain " data-usepaging="True">
+                            <h3 class="title-slide"></h3>
+                            <div class="swiper-container pdb30 ">
+                                <ul class="swiper-wrapper clearfix">
+                                    @{
+                                        foreach (NewsRes item3 in lst3News)
+                                        {
+                                            <li class="swiper-slide" data-boxtype="homenewsposition">
+                                                <div class="slide-wrap">
+                                                    <a href="/Detail/@item3.TypeID/@item3.NewsID" title="@item3.Title"><figure><img class="image" title="@item3.Title" alt="@item3.Title" src="@item3.ImageTH" style="width:260px;height:162px !important" /><figcaption>@item3.Title</figcaption></figure></a>
+                                                    <div class="post-detail">
+                                                        <h3 class="title">
+                                                            <a href="/Detail/@item3.TypeID/@item3.NewsID" title="@item3.Title" data-linktype="newsdetail" data-id="20171122002532244">@item3.Title</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+
+                                    }
+                                    
+                                    
+                                </ul>
+                                <div class="swiper-button-next">
+                                    <a>&nbsp;</a>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <a>&nbsp;</a>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+                        <script>(runinit = window.runinit || []).push(function () { Slide6Swiper(); });</script>
+
+                    </li>
+                </ul>
+                <div data-check-position="soha_home_b2_end"></div>
+                
+                <ul class="list-topic-cate timeline epl-listdefault">
+                    @{
+                        foreach (NewsRes item4 in lst4News)
+                        {
+                            <li class='item-news-cate clearfix  related-news' data-boxtype="timelineposition" data-marked-zoneid="soha_home_bs1" data-locked="False" data-posid="0" data-newsid="20171122101322369" data-slottype='relatednews'>
+                                <a href="/Detail/@item4.TypeID/@item4.NewsID" title="@item4.Title" class=""><figure><img style="width:260px;height:162px !important" class="thumbs-img" title="@item4.Title" alt="@item4.Title" src="@item4.ImageTH" width="260" height="162" /><figcaption>@item4.Title</figcaption></figure></a>
+                                <div class='info-new-cate elp-list'>
+                                    <h3><a href="/Detail/@item4.TypeID/@item4.NewsID" title="@item4.Title" class="title-new-cate" data-id="20171122101322369" newsid="20171122101322369" arrnewsid="20171122101322369">@item4.Title</a></h3>
+                                    <span class='sapo-new'>@item4.ShortContent</span>
+
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-check-position="soha_home_b3_1_end"></div>
+<div class="main-container clearfix home-main-bottom">
+    <div class="left-content clearfix pdt0">
+        <div class="groupleft clearfix" id="left-main-content2">
+            <div class="container-category mgt0" id="leftmedium2">
+                <ul class="list-topic-cate timeline epl-listdefault listtimelinelast bd0">
+                    <li class="item-news-cate bxmoinhat clearfix">
+                        <div data-check-position="soha_home_b4_start"></div>
+                        <div class="boxmoinhat" data-marked-zoneid="soha_home_b4">
+                            <div class="header-boxmoinhat">
+                                Mới nhất
+
+                                <div class="header-buttons">
+                                    <div class="page">0/0</div>
+                                    <div class="button b-up"></div>
+                                    <div class="button b-down"></div>
+                                </div>
+                            </div>
+                            <div class="body-boxmoinhat">
+                                <ul data-boxtype="recentnews" class="list-baimoinhat">
+                                  @{
+                                   foreach (NewsRes item5 in lst5News)
+                                   {
+                                       @*<li class='itembaimoinhat clearfix'>
+                                           <div class='clearfix'>
+                                               <h3><a href='/Detail/@item5.TypeID/@item5.NewsID' class='title' title='@item5.Title' data-linktype="newsdetail" data-id="20171122133852197">@item5.Title </a></h3>
+                                           </div>
+                                       </li>*@
+                                       <li class='itembaimoinhat clearfix'>
+                                       <div class='clearfix'>
+                                           <div class='time new'>
+                                               @Convert.ToDateTime(item5.CreatedDate.ToString()).ToString("HH:mm")
+                                           </div>
+                                           <h3><a href='/Detail/@item5.TypeID/@item5.NewsID' class='title' title='@item5.Title' data-linktype="newsdetail" data-id="20171122133852197">@item5.Title</a></h3>
+                                       </div>
+                                   </li>
+                                   }
+                                }
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-check-position="soha_home_b4_end"></div>
+                    </li>
+
+                    <li class="item-news-cate clearfix">
+                        <div data-check-position="soha_home_dbl_start"></div>
+                        <div id="slDungBoLo" class="slide-list timelineslide-contain ">
+                            <b>Đừng bỏ lỡ</b>
+                            <div class="swiper-container pdb30">
+                                <ul class="swiper-wrapper clearfix">
+                                @{
+                                    foreach (NewsRes item6 in lst6News)
+                                    {
+                                        <li class="swiper-slide ">
+                                            <div class="slide-wrap">
+                                                <a href="/Detail/@item6.TypeID/@item6.NewsID" title="@item6.Title"><figure><img class="image" title="@item6.Title" alt="@item6.Title" src="@item6.ImageTH" style="width:260px;height:162px !important"/><figcaption>@item6.Title</figcaption></figure></a>
+                                                <div class="post-detail">
+                                                    <h3 class="title">
+                                                        <a href="/Detail/@item6.TypeID/@item6.NewsID" title='@item6.Title'>@item6.Title</a>
+                                                    </h3>
+                                                    <div class="summary">
+                                                        <div class='sm-detail'>
+                                                            &nbsp;<span class='comment view' data-newsId='20171121102904306'>@item6.ViewNumber</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        }
+                                    }
+                                </ul>
+                                <div class="swiper-button-next"><a rel="nofollow" href="javascript:void(0);">&nbsp;</a></div>
+                                <div class="swiper-button-prev"><a rel="nofollow" href="javascript:void(0);">&nbsp;</a></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <script>(runinit = window.runinit || []).push(function() {initTimelineSlide();});</script>
+                        </div>
+
+                        <div data-check-position="soha_home_dbl_end"></div>
+                    </li>
+
+                </ul>
+
+
+                @*<div data-check-position="soha_home_boxes_start"></div>
+                <div class="clearfix mgt10">
+                    <div class="w320 fl">
+                        <div zoneid="10009" class="box-news zone">
+                            <h2 class="box-title">
+                                <a href="thoi-su.htm" class="inner" title="THỜI SỰ">THỜI SỰ</a>
+                            </h2>
+                            <a href="pgs-noi-vu-4-tre-tu-vong-o-bac-ninh-chinh-bo-toi-cung-mat-vi-nhiem-khuan-benh-vien-20171122105446759.htm" title="PGS n&#243;i vụ 4 trẻ tử vong ở Bắc Ninh: &quot;Ch&#237;nh bố t&#244;i cũng mất v&#236; nhiễm khuẩn bệnh viện&quot;"><figure><img title="PGS n&#243;i vụ 4 trẻ tử vong ở Bắc Ninh: &quot;Ch&#237;nh bố t&#244;i cũng mất v&#236; nhiễm khuẩn bệnh viện&quot;" alt="PGS n&#243;i vụ 4 trẻ tử vong ở Bắc Ninh: &quot;Ch&#237;nh bố t&#244;i cũng mất v&#236; nhiễm khuẩn bệnh viện&quot;" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/320_200/2017/phonglan-1511322251194-0-0-409-660-crop-1511322253672.jpg" width="320" height="200" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="PGS n&#243;i vụ 4 trẻ tử vong ở Bắc Ninh: &quot;Ch&#237;nh bố t&#244;i cũng mất v&#236; nhiễm khuẩn bệnh viện&quot;" alt="PGS n&#243;i vụ 4 trẻ tử vong ở Bắc Ninh: &quot;Ch&#237;nh bố t&#244;i cũng mất v&#236; nhiễm khuẩn bệnh viện&quot;" src="http://sohanews.sohacdn.com/zoom/320_200/2017/phonglan-1511322251194-0-0-409-660-crop-1511322253672.jpg" width="320" height="200" /></noscript><figcaption>PGS nói vụ 4 trẻ tử vong ở Bắc Ninh: "Chính bố tôi cũng mất vì nhiễm khuẩn bệnh viện"</figcaption></figure></a><h3 class="title"><a href="pgs-noi-vu-4-tre-tu-vong-o-bac-ninh-chinh-bo-toi-cung-mat-vi-nhiem-khuan-benh-vien-20171122105446759.htm" title="PGS n&#243;i vụ 4 trẻ tử vong ở Bắc Ninh: &quot;Ch&#237;nh bố t&#244;i cũng mất v&#236; nhiễm khuẩn bệnh viện&quot;" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122105446759">PGS nói vụ 4 trẻ tử vong ở Bắc Ninh: "Chính bố tôi cũng mất vì nhiễm khuẩn bệnh viện"</a></h3>
+                            <ul class="list sub-list"><li><a href="pho-chanh-van-phong-huyen-uy-nam-bat-dong-trong-phong-pho-bi-thu-co-vet-mau-tren-nguoi-20171122115620744.htm" title="Ph&#243; ch&#225;nh văn ph&#242;ng huyện ủy nằm bất động trong ph&#242;ng ph&#243; b&#237; thư, c&#243; vết m&#225;u tr&#234;n người" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122115620744">Phó chánh văn phòng huyện ủy nằm bất động trong phòng phó bí thư, có vết máu trên người</a></li><li><a href="hdnd-tp-da-nang-hop-bat-thuong-ban-chuyen-nhan-su-20171122103819556.htm" title="HĐND TP Đ&#224; Nẵng họp bất thường b&#224;n chuyện nh&#226;n sự" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122103819556">HĐND TP Đà Nẵng họp bất thường bàn chuyện nhân sự</a></li></ul>
+                        </div>
+                    </div>
+                    <div class="w320 fr">
+                        <div zoneid="10015" class="box-news zone">
+                            <h2 class="box-title">
+                                <a href="phap-luat.htm" class="inner" title="Ph&#225;p luật">Pháp luật</a>
+                            </h2>
+
+
+                            <a href="hiep-dam-nguoi-yeu-cua-ban-roi-ep-mua-thuoc-tranh-thai-uong-20171122104602556.htm" title="Hiếp d&#226;m người y&#234;u của bạn rồi &#233;p mua thuốc tr&#225;nh thai uống"><figure><img title="Hiếp d&#226;m người y&#234;u của bạn rồi &#233;p mua thuốc tr&#225;nh thai uống" alt="Hiếp d&#226;m người y&#234;u của bạn rồi &#233;p mua thuốc tr&#225;nh thai uống" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/320_200/2017/hhip-1511321748181-8-0-418-660-crop-1511321751962.jpg" width="320" height="200" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="Hiếp d&#226;m người y&#234;u của bạn rồi &#233;p mua thuốc tr&#225;nh thai uống" alt="Hiếp d&#226;m người y&#234;u của bạn rồi &#233;p mua thuốc tr&#225;nh thai uống" src="http://sohanews.sohacdn.com/zoom/320_200/2017/hhip-1511321748181-8-0-418-660-crop-1511321751962.jpg" width="320" height="200" /></noscript><figcaption>Hiếp dâm người yêu của bạn rồi ép mua thuốc tránh thai uống</figcaption></figure></a><h3 class="title"><a href="hiep-dam-nguoi-yeu-cua-ban-roi-ep-mua-thuoc-tranh-thai-uong-20171122104602556.htm" title="Hiếp d&#226;m người y&#234;u của bạn rồi &#233;p mua thuốc tr&#225;nh thai uống" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122104602556">Hiếp dâm người yêu của bạn rồi ép mua thuốc tránh thai uống</a></h3>
+
+                            <ul class="list sub-list"><li><a href="au-da-trong-quan-nhau-mot-nguoi-nguy-kich-sau-tieng-sung-no-20171122100256916.htm" title="Ẩu đả trong qu&#225;n nhậu, một người nguy kịch sau tiếng s&#250;ng nổ" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122100256916">Ẩu đả trong quán nhậu, một người nguy kịch sau tiếng súng nổ</a></li><li><a href="chien-sy-ca-mat-tich-nghi-bi-bat-coc-tong-tien-duoc-xac-dinh-van-song-binh-thuong-2017112017131368.htm" title="Chiến sỹ CA mất t&#237;ch, nghi bị bắt c&#243;c, tống tiền được x&#225;c định &quot;vẫn sống b&#236;nh thường&quot;" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="2017112017131368">Chiến sỹ CA mất tích, nghi bị bắt cóc, tống tiền được xác định "vẫn sống bình thường"</a></li></ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix mgt34">
+                    <div class="w320 fl">
+
+
+                        <div zoneid="10030" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="quoc-te.htm" class="inner" title="Quốc tế">Quốc tế</a>
+                            </h2>
+
+
+                            <a href="unc-cong-bo-video-linh-trieu-tien-dao-tau-bi-ban-xuyen-bien-gioi-my-to-binh-nhuong-vi-pham-lenh-ngung-ban-201711221033384.htm" title="UNC c&#244;ng bố video l&#237;nh Triều Ti&#234;n đ&#224;o tẩu bị bắn xuy&#234;n bi&#234;n giới, Mỹ tố B&#236;nh Nhưỡng vi phạm lệnh ngừng bắn"><figure><img title="UNC c&#244;ng bố video l&#237;nh Triều Ti&#234;n đ&#224;o tẩu bị bắn xuy&#234;n bi&#234;n giới, Mỹ tố B&#236;nh Nhưỡng vi phạm lệnh ngừng bắn" alt="UNC c&#244;ng bố video l&#237;nh Triều Ti&#234;n đ&#224;o tẩu bị bắn xuy&#234;n bi&#234;n giới, Mỹ tố B&#236;nh Nhưỡng vi phạm lệnh ngừng bắn" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/320_200/2017/ava-1511321545032-0-0-496-799-crop-1511321549125.jpg" width="320" height="200" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="UNC c&#244;ng bố video l&#237;nh Triều Ti&#234;n đ&#224;o tẩu bị bắn xuy&#234;n bi&#234;n giới, Mỹ tố B&#236;nh Nhưỡng vi phạm lệnh ngừng bắn" alt="UNC c&#244;ng bố video l&#237;nh Triều Ti&#234;n đ&#224;o tẩu bị bắn xuy&#234;n bi&#234;n giới, Mỹ tố B&#236;nh Nhưỡng vi phạm lệnh ngừng bắn" src="http://sohanews.sohacdn.com/zoom/320_200/2017/ava-1511321545032-0-0-496-799-crop-1511321549125.jpg" width="320" height="200" /></noscript><figcaption>UNC công bố video lính Triều Tiên đào tẩu bị bắn xuyên biên giới, Mỹ tố Bình Nhưỡng vi phạm lệnh ngừng bắn</figcaption></figure></a><h3 class="title"><a href="unc-cong-bo-video-linh-trieu-tien-dao-tau-bi-ban-xuyen-bien-gioi-my-to-binh-nhuong-vi-pham-lenh-ngung-ban-201711221033384.htm" title="UNC c&#244;ng bố video l&#237;nh Triều Ti&#234;n đ&#224;o tẩu bị bắn xuy&#234;n bi&#234;n giới, Mỹ tố B&#236;nh Nhưỡng vi phạm lệnh ngừng bắn" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="201711221033384">UNC công bố video lính Triều Tiên đào tẩu bị bắn xuyên biên giới, Mỹ tố Bình Nhưỡng vi phạm lệnh ngừng bắn</a></h3>
+
+                            <ul class="list sub-list"><li><a href="thang-lon-o-syria-nga-coi-nato-chi-la-ho-giay-20171122074319478.htm" title="Thắng lớn ở Syria, Nga coi NATO chỉ l&#224; “hổ giấy”?" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122074319478">Thắng lớn ở Syria, Nga coi NATO chỉ là “hổ giấy”?</a></li><li><a href="vua-thoat-chet-binh-si-trieu-tien-dao-tau-da-doi-nghe-k-pop-20171122072901322.htm" title="Vừa tho&#225;t chết, binh sĩ Triều Ti&#234;n đ&#224;o tẩu đ&#227; đ&#242;i nghe K-Pop" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122072901322">Vừa thoát chết, binh sĩ Triều Tiên đào tẩu đã đòi nghe K-Pop</a></li></ul>
+
+                        </div>
+
+                    </div>
+                    <div class="w320 fr">
+
+
+                        <div zoneid="10058" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="quan-su.htm" class="inner" title="Qu&#226;n Sự">Quân Sự</a>
+                            </h2>
+
+
+                            <a href="so-vu-khi-nga-toa-sang-anh-ap-dung-chieu-tro-ban-gi-tai-trien-lam-farnborough-20171122114943369.htm" title="Sợ vũ kh&#237; Nga tỏa s&#225;ng, Anh &#225;p dụng chi&#234;u tr&#242; “bẩn” g&#236; tại Triển l&#227;m Farnborough?"><figure><img title="Sợ vũ kh&#237; Nga tỏa s&#225;ng, Anh &#225;p dụng chi&#234;u tr&#242; “bẩn” g&#236; tại Triển l&#227;m Farnborough?" alt="Sợ vũ kh&#237; Nga tỏa s&#225;ng, Anh &#225;p dụng chi&#234;u tr&#242; “bẩn” g&#236; tại Triển l&#227;m Farnborough?" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/320_200/2017/1036886836-1511325344060-0-128-541-999-crop-1511325351460.jpg" width="320" height="200" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="Sợ vũ kh&#237; Nga tỏa s&#225;ng, Anh &#225;p dụng chi&#234;u tr&#242; “bẩn” g&#236; tại Triển l&#227;m Farnborough?" alt="Sợ vũ kh&#237; Nga tỏa s&#225;ng, Anh &#225;p dụng chi&#234;u tr&#242; “bẩn” g&#236; tại Triển l&#227;m Farnborough?" src="http://sohanews.sohacdn.com/zoom/320_200/2017/1036886836-1511325344060-0-128-541-999-crop-1511325351460.jpg" width="320" height="200" /></noscript><figcaption>Sợ vũ khí Nga tỏa sáng, Anh áp dụng chiêu trò “bẩn” gì tại Triển lãm Farnborough?</figcaption></figure></a><h3 class="title"><a href="so-vu-khi-nga-toa-sang-anh-ap-dung-chieu-tro-ban-gi-tai-trien-lam-farnborough-20171122114943369.htm" title="Sợ vũ kh&#237; Nga tỏa s&#225;ng, Anh &#225;p dụng chi&#234;u tr&#242; “bẩn” g&#236; tại Triển l&#227;m Farnborough?" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122114943369">Sợ vũ khí Nga tỏa sáng, Anh áp dụng chiêu trò “bẩn” gì tại Triển lãm Farnborough?</a></h3>
+
+                            <ul class="list sub-list"><li><a href="tim-thu-pham-gay-ra-tham-hoa-tau-ngam-argentina-cuoc-dieu-tra-bat-dau-tu-dau-20171122122230791.htm" title="T&#236;m &quot;thủ phạm&quot; g&#226;y ra thảm họa t&#224;u ngầm Argentina: Cuộc điều tra bắt đầu từ đ&#226;u?" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122122230791">Tìm "thủ phạm" gây ra thảm họa tàu ngầm Argentina: Cuộc điều tra bắt đầu từ đâu?</a></li><li><a href="vu-chim-tau-ngam-kursk-khoang-so-9-can-dan-o-xi-than-chet-dang-dem-nguoc-thoi-gian-20171122112435291.htm" title="Vụ ch&#236;m t&#224;u ngầm Kursk: Khoang số 9 cạn dần &#244; xi - Thần chết đang đếm ngược thời gian" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122112435291">Vụ chìm tàu ngầm Kursk: Khoang số 9 cạn dần ô xi - Thần chết đang đếm ngược thời gian</a></li></ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix mgt34">
+                    <div class="w320 fl">
+
+
+                        <div zoneid="10001" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="giai-tri.htm" class="inner" title="Giải tr&#237;">Giải trí</a>
+                            </h2>
+
+
+                            <a href="phi-nhung-lan-dau-noi-ve-cha-de-that-su-cua-con-gai-20171122110851244.htm" title="Phi Nhung lần đầu n&#243;i về cha đẻ thật sự của con g&#225;i"><figure><img title="Phi Nhung lần đầu n&#243;i về cha đẻ thật sự của con g&#225;i" alt="Phi Nhung lần đầu n&#243;i về cha đẻ thật sự của con g&#225;i" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/320_200/2017/23659487102083462841352554431414846403746647n-1511323715207-0-0-596-960-crop-1511323721555.jpg" width="320" height="200" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="Phi Nhung lần đầu n&#243;i về cha đẻ thật sự của con g&#225;i" alt="Phi Nhung lần đầu n&#243;i về cha đẻ thật sự của con g&#225;i" src="http://sohanews.sohacdn.com/zoom/320_200/2017/23659487102083462841352554431414846403746647n-1511323715207-0-0-596-960-crop-1511323721555.jpg" width="320" height="200" /></noscript><figcaption>Phi Nhung lần đầu nói về cha đẻ thật sự của con gái</figcaption></figure></a><h3 class="title"><a href="phi-nhung-lan-dau-noi-ve-cha-de-that-su-cua-con-gai-20171122110851244.htm" title="Phi Nhung lần đầu n&#243;i về cha đẻ thật sự của con g&#225;i" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122110851244">Phi Nhung lần đầu nói về cha đẻ thật sự của con gái</a></h3>
+
+                            <ul class="list sub-list"><li><a href="dien-vien-trong-phim-gay-tranh-cai-vi-khong-mac-noi-y-tiet-lo-hau-truong-thieu-thon-2017112207174015.htm" title="Diễn vi&#234;n trong phim g&#226;y tranh c&#227;i v&#236; kh&#244;ng mặc nội y tiết lộ hậu trường thiếu thốn" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="2017112207174015">Diễn viên trong phim gây tranh cãi vì không mặc nội y tiết lộ hậu trường thiếu thốn</a></li><li><a href="vo-chong-duong-tang-khien-ty-phu-giau-nhat-chau-a-phai-kinh-ne-20171122011624103.htm" title="Vợ chồng &quot;Đường Tăng&quot; khiến tỷ ph&#250; gi&#224;u nhất ch&#226;u &#193; phải k&#237;nh nể" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122011624103">Vợ chồng "Đường Tăng" khiến tỷ phú giàu nhất châu Á phải kính nể</a></li></ul>
+
+                        </div>
+
+                    </div>
+                    <div class="w320 fr">
+
+
+                        <div zoneid="10002" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="the-thao.htm" class="inner" title="Thể thao">Thể thao</a>
+                            </h2>
+
+
+                            <a href="co-so-nao-de-tin-vao-giac-mo-world-cup-cua-ryan-giggs-paul-scholes-va-trung-tam-pvf-20171122085217634.htm" title="Cơ sở n&#224;o để tin v&#224;o giấc mơ World Cup của Ryan Giggs, Paul Scholes v&#224; Trung t&#226;m PVF?"><figure><img title="Cơ sở n&#224;o để tin v&#224;o giấc mơ World Cup của Ryan Giggs, Paul Scholes v&#224; Trung t&#226;m PVF?" alt="Cơ sở n&#224;o để tin v&#224;o giấc mơ World Cup của Ryan Giggs, Paul Scholes v&#224; Trung t&#226;m PVF?" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/320_200/2017/3-1511315249898-0-0-409-660-crop-1511315253127.png" width="320" height="200" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="Cơ sở n&#224;o để tin v&#224;o giấc mơ World Cup của Ryan Giggs, Paul Scholes v&#224; Trung t&#226;m PVF?" alt="Cơ sở n&#224;o để tin v&#224;o giấc mơ World Cup của Ryan Giggs, Paul Scholes v&#224; Trung t&#226;m PVF?" src="http://sohanews.sohacdn.com/zoom/320_200/2017/3-1511315249898-0-0-409-660-crop-1511315253127.png" width="320" height="200" /></noscript><figcaption>Cơ sở nào để tin vào giấc mơ World Cup của Ryan Giggs, Paul Scholes và Trung tâm PVF?</figcaption></figure></a><h3 class="title"><a href="co-so-nao-de-tin-vao-giac-mo-world-cup-cua-ryan-giggs-paul-scholes-va-trung-tam-pvf-20171122085217634.htm" title="Cơ sở n&#224;o để tin v&#224;o giấc mơ World Cup của Ryan Giggs, Paul Scholes v&#224; Trung t&#226;m PVF?" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122085217634">Cơ sở nào để tin vào giấc mơ World Cup của Ryan Giggs, Paul Scholes và Trung tâm PVF?</a></h3>
+
+                            <ul class="list sub-list"><li><a href="can-canh-quan-cafe-moi-khai-truong-cua-cong-phuong-20171122083706181.htm" title="Cận cảnh qu&#225;n cafe mới khai trương của C&#244;ng Phượng" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122083706181">Cận cảnh quán cafe mới khai trương của Công Phượng</a></li><li><a href="tham-vong-world-cup-cua-ryan-giggs-tai-viet-nam-gap-thach-thuc-tu-australia-20171122081940478.htm" title="Tham vọng World Cup của Ryan Giggs tại Việt Nam gặp th&#225;ch thức từ Australia" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122081940478">Tham vọng World Cup của Ryan Giggs tại Việt Nam gặp thách thức từ Australia</a></li></ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix mgt34">
+                    <div class="w210 fl">
+
+
+                        <div zoneid="10147" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="doi-song.htm" class="inner" title="Đời sống">Đời sống</a>
+                            </h2>
+
+
+                            <a href="ngu-say-chong-bi-vo-dung-van-tay-mo-dien-thoai-va-dieu-te-hai-da-xay-ra-20171122114505009.htm" title="Ngủ say, chồng bị vợ d&#249;ng v&#226;n tay mở điện thoại v&#224; điều tệ hại đ&#227; xảy ra"><figure><img title="Ngủ say, chồng bị vợ d&#249;ng v&#226;n tay mở điện thoại v&#224; điều tệ hại đ&#227; xảy ra" alt="Ngủ say, chồng bị vợ d&#249;ng v&#226;n tay mở điện thoại v&#224; điều tệ hại đ&#227; xảy ra" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/210_131/2017/xem-trom-tin-nhan-cua-chong-vo-bi-phat-gan-1-ty-dong-1511325486132-13-0-406-634-crop-1511325502209.jpg" width="210" height="131" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="Ngủ say, chồng bị vợ d&#249;ng v&#226;n tay mở điện thoại v&#224; điều tệ hại đ&#227; xảy ra" alt="Ngủ say, chồng bị vợ d&#249;ng v&#226;n tay mở điện thoại v&#224; điều tệ hại đ&#227; xảy ra" src="http://sohanews.sohacdn.com/zoom/210_131/2017/xem-trom-tin-nhan-cua-chong-vo-bi-phat-gan-1-ty-dong-1511325486132-13-0-406-634-crop-1511325502209.jpg" width="210" height="131" /></noscript><figcaption>Ngủ say, chồng bị vợ dùng vân tay mở điện thoại và điều tệ hại đã xảy ra</figcaption></figure></a><h3 class="title"><a href="ngu-say-chong-bi-vo-dung-van-tay-mo-dien-thoai-va-dieu-te-hai-da-xay-ra-20171122114505009.htm" title="Ngủ say, chồng bị vợ d&#249;ng v&#226;n tay mở điện thoại v&#224; điều tệ hại đ&#227; xảy ra" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122114505009">Ngủ say, chồng bị vợ dùng vân tay mở điện thoại và điều tệ hại đã xảy ra</a></h3>
+
+                            <ul class="list sub-list"><li><a href="gian-than-khet-tieng-tong-trieu-tim-dat-phong-thuy-thay-phong-thuy-noi-1-cau-qua-nhien-ung-nghiem-20171121161622744.htm" title="Gian thần kh&#233;t tiếng Tống triều t&#236;m đất phong thủy, thầy phong thủy n&#243;i 1 c&#226;u, quả nhi&#234;n ứng nghiệm" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171121161622744">Gian thần khét tiếng Tống triều tìm đất phong thủy, thầy phong thủy nói 1 câu, quả nhiên ứng nghiệm</a></li><li><a href="viet-gui-con-3-cau-truoc-khi-chet-tai-tu-dh-bac-kinh-khien-nhieu-nguoi-dan-ong-nghen-ngao-20171121115431228.htm" title="Viết gửi con 3 c&#226;u trước khi chết, t&#224;i tử ĐH Bắc Kinh khiến nhiều người đ&#224;n &#244;ng nghẹn ng&#224;o" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171121115431228">Viết gửi con 3 câu trước khi chết, tài tử ĐH Bắc Kinh khiến nhiều người đàn ông nghẹn ngào</a></li></ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="w210 fl mgl15">
+
+
+                        <div zoneid="10019" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="kinh-doanh.htm" class="inner" title="Kinh doanh">Kinh doanh</a>
+                            </h2>
+
+
+                            <a href="ai-da-bo-9-ty-de-mua-hai-chiec-sim-01655555555-va-01255555555-20171122083202587.htm" title="Ai đ&#227; bỏ 9 tỷ để mua hai chiếc sim 016.5555.5555 v&#224; 012.5555.5555?"><figure><img title="Ai đ&#227; bỏ 9 tỷ để mua hai chiếc sim 016.5555.5555 v&#224; 012.5555.5555?" alt="Ai đ&#227; bỏ 9 tỷ để mua hai chiếc sim 016.5555.5555 v&#224; 012.5555.5555?" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/210_131/2017/sim-1511314250601-38-0-447-660-crop-1511314258158.jpg" width="210" height="131" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="Ai đ&#227; bỏ 9 tỷ để mua hai chiếc sim 016.5555.5555 v&#224; 012.5555.5555?" alt="Ai đ&#227; bỏ 9 tỷ để mua hai chiếc sim 016.5555.5555 v&#224; 012.5555.5555?" src="http://sohanews.sohacdn.com/zoom/210_131/2017/sim-1511314250601-38-0-447-660-crop-1511314258158.jpg" width="210" height="131" /></noscript><figcaption>Ai đã bỏ 9 tỷ để mua hai chiếc sim 016.5555.5555 và 012.5555.5555?</figcaption></figure></a><h3 class="title"><a href="ai-da-bo-9-ty-de-mua-hai-chiec-sim-01655555555-va-01255555555-20171122083202587.htm" title="Ai đ&#227; bỏ 9 tỷ để mua hai chiếc sim 016.5555.5555 v&#224; 012.5555.5555?" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122083202587">Ai đã bỏ 9 tỷ để mua hai chiếc sim 016.5555.5555 và 012.5555.5555?</a></h3>
+
+                            <ul class="list sub-list"><li><a href="con-no-ngan-hang-kieu-viet-nam-vi-si-dien-hay-tieu-hoang-20171121160423025.htm" title="Con nợ ng&#226;n h&#224;ng kiểu Việt Nam: V&#236; sĩ diện, hay ti&#234;u hoang?" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171121160423025">Con nợ ngân hàng kiểu Việt Nam: Vì sĩ diện, hay tiêu hoang?</a></li><li><a href="moi-ngay-chi-duoc-rut-5-trieu-qua-bat-tien-20171122095420134.htm" title="Mỗi ng&#224;y chỉ được r&#250;t 5 triệu: Qu&#225; bất tiện!" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122095420134">Mỗi ngày chỉ được rút 5 triệu: Quá bất tiện!</a></li></ul>
+
+                        </div>
+
+                    </div>
+                    <div class="w210 fr">
+
+
+                        <div zoneid="10143" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="kham-pha.htm" class="inner" title="Kh&#225;m ph&#225;">Khám phá</a>
+                            </h2>
+
+
+                            <a href="nam-2018-trai-dat-quay-cham-lai-thien-tai-ap-den-1-ty-dan-co-the-gap-nguy-hiem-20171121010937524.htm" title="Năm 2018: Tr&#225;i Đất quay chậm lại, thi&#234;n tai ập đến, 1 tỷ d&#226;n c&#243; thể gặp nguy hiểm"><figure><img title="Năm 2018: Tr&#225;i Đất quay chậm lại, thi&#234;n tai ập đến, 1 tỷ d&#226;n c&#243; thể gặp nguy hiểm" alt="Năm 2018: Tr&#225;i Đất quay chậm lại, thi&#234;n tai ập đến, 1 tỷ d&#226;n c&#243; thể gặp nguy hiểm" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/210_131/2017/photo-1-1511199479437-0-7-279-456-crop-1511199488652.gif" width="210" height="131" src="sohanews.sohacdn.com/zoom/210_131/2017/photo-1-1511199479437-0-7-279-456-crop-1511199488652.gif.png" /><noscript><img class= title="Năm 2018: Tr&#225;i Đất quay chậm lại, thi&#234;n tai ập đến, 1 tỷ d&#226;n c&#243; thể gặp nguy hiểm" alt="Năm 2018: Tr&#225;i Đất quay chậm lại, thi&#234;n tai ập đến, 1 tỷ d&#226;n c&#243; thể gặp nguy hiểm" src="http://sohanews.sohacdn.com/zoom/210_131/2017/photo-1-1511199479437-0-7-279-456-crop-1511199488652.gif" width="210" height="131" /></noscript><figcaption>Năm 2018: Trái Đất quay chậm lại, thiên tai ập đến, 1 tỷ dân có thể gặp nguy hiểm</figcaption></figure></a><h3 class="title"><a href="nam-2018-trai-dat-quay-cham-lai-thien-tai-ap-den-1-ty-dan-co-the-gap-nguy-hiem-20171121010937524.htm" title="Năm 2018: Tr&#225;i Đất quay chậm lại, thi&#234;n tai ập đến, 1 tỷ d&#226;n c&#243; thể gặp nguy hiểm" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171121010937524">Năm 2018: Trái Đất quay chậm lại, thiên tai ập đến, 1 tỷ dân có thể gặp nguy hiểm</a></h3>
+
+                            <ul class="list sub-list"><li><a href="bang-chung-ky-luc-nghi-xuat-hien-quai-vat-ho-loch-ness-bi-an-hon-200-nam-duoc-giai-ma-2017112109563165.htm" title="Bằng chứng kỷ lục nghi xuất hiện &quot;qu&#225;i vật hồ Loch Ness&quot;: B&#237; ẩn hơn 200 năm được giải m&#227;?" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="2017112109563165">Bằng chứng kỷ lục nghi xuất hiện "quái vật hồ Loch Ness": Bí ẩn hơn 200 năm được giải mã?</a></li><li><a href="phat-hien-bo-ngoai-hanh-tinh-xam-nhap-xuong-trai-dat-moi-nguy-voi-loai-nguoi-20171121145850916.htm" title="Ph&#225;t hiện bọ ngo&#224;i h&#224;nh tinh x&#226;m nhập xuống Tr&#225;i Đất: Mối nguy với lo&#224;i người?" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171121145850916">Phát hiện bọ ngoài hành tinh xâm nhập xuống Trái Đất: Mối nguy với loài người?</a></li></ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix mgt34">
+                    <div class="w320 fl">
+
+
+                        <div zoneid="10066" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="cu-dan-mang.htm" class="inner" title="Cư d&#226;n mạng">Cư dân mạng</a>
+                            </h2>
+
+
+                            <a href="bo-chong-bo-viec-10-nam-di-choi-nho-me-chong-ung-ho-20171119235234487.htm" title="Bỏ chồng, bỏ việc 10 năm đi chơi nhờ mẹ chồng... ủng hộ"><figure><img title="Bỏ chồng, bỏ việc 10 năm đi chơi nhờ mẹ chồng... ủng hộ" alt="Bỏ chồng, bỏ việc 10 năm đi chơi nhờ mẹ chồng... ủng hộ" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/320_200/2017/1567571418576748977801133965328440313657005o-1511110080671-0-0-1193-1920-crop-1511110084683.jpg" width="320" height="200" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="Bỏ chồng, bỏ việc 10 năm đi chơi nhờ mẹ chồng... ủng hộ" alt="Bỏ chồng, bỏ việc 10 năm đi chơi nhờ mẹ chồng... ủng hộ" src="http://sohanews.sohacdn.com/zoom/320_200/2017/1567571418576748977801133965328440313657005o-1511110080671-0-0-1193-1920-crop-1511110084683.jpg" width="320" height="200" /></noscript><figcaption>Bỏ chồng, bỏ việc 10 năm đi chơi nhờ mẹ chồng... ủng hộ</figcaption></figure></a><h3 class="title"><a href="bo-chong-bo-viec-10-nam-di-choi-nho-me-chong-ung-ho-20171119235234487.htm" title="Bỏ chồng, bỏ việc 10 năm đi chơi nhờ mẹ chồng... ủng hộ" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171119235234487">Bỏ chồng, bỏ việc 10 năm đi chơi nhờ mẹ chồng... ủng hộ</a></h3>
+
+                            <ul class="list sub-list"><li><a href="tra-sua-gay-sot-ten-ren-phai-tam-dong-cua-vi-khong-dam-bao-chat-luong-ngay-tuan-dau-khai-truong-20171122070709525.htm" title="Tr&#224; sữa g&#226;y sốt Ten Ren phải tạm đ&#243;ng cửa v&#236; kh&#244;ng đảm bảo chất lượng ngay tuần đầu khai trương" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122070709525">Trà sữa gây sốt Ten Ren phải tạm đóng cửa vì không đảm bảo chất lượng ngay tuần đầu khai trương</a></li><li><a href="9-minh-hoa-dien-hinh-chung-minh-rang-co-ban-trai-la-co-duoc-mon-hoi-sieu-khung-20171122065924916.htm" title="9 minh họa điển h&#236;nh chứng minh rằng: C&#243; bạn trai l&#224; c&#243; được “m&#243;n hời” si&#234;u khủng!" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122065924916">9 minh họa điển hình chứng minh rằng: Có bạn trai là có được “món hời” siêu khủng!</a></li></ul>
+
+                        </div>
+
+                    </div>
+                    <div class="w320 fl mgl15">
+
+
+                        <div zoneid="10040" class="box-news zone">
+                            <h2 class="box-title">
+
+                                <a href="song-khoe.htm" class="inner" title="Sống khỏe">Sống khỏe</a>
+                            </h2>
+
+
+                            <a href="cong-bo-ket-luan-ve-su-co-y-khoa-4-tre-tu-vong-tai-benh-vien-san-nhi-bac-ninh-20171122100522697.htm" title="C&#244;ng bố kết luận về sự cố y khoa 4 trẻ tử vong tại Bệnh viện Sản - Nhi Bắc Ninh"><figure><img title="C&#244;ng bố kết luận về sự cố y khoa 4 trẻ tử vong tại Bệnh viện Sản - Nhi Bắc Ninh" alt="C&#244;ng bố kết luận về sự cố y khoa 4 trẻ tử vong tại Bệnh viện Sản - Nhi Bắc Ninh" class="lazy " data-original="http://sohanews.sohacdn.com/zoom/320_200/2017/photo1511319735871-1511319736912-27-0-400-599-crop-1511319814669.jpg" width="320" height="200" src="soha4.mediacdn.vn/Images/1px.png" /><noscript><img class= title="C&#244;ng bố kết luận về sự cố y khoa 4 trẻ tử vong tại Bệnh viện Sản - Nhi Bắc Ninh" alt="C&#244;ng bố kết luận về sự cố y khoa 4 trẻ tử vong tại Bệnh viện Sản - Nhi Bắc Ninh" src="http://sohanews.sohacdn.com/zoom/320_200/2017/photo1511319735871-1511319736912-27-0-400-599-crop-1511319814669.jpg" width="320" height="200" /></noscript><figcaption>Công bố kết luận về sự cố y khoa 4 trẻ tử vong tại Bệnh viện Sản - Nhi Bắc Ninh</figcaption></figure></a><h3 class="title"><a href="cong-bo-ket-luan-ve-su-co-y-khoa-4-tre-tu-vong-tai-benh-vien-san-nhi-bac-ninh-20171122100522697.htm" title="C&#244;ng bố kết luận về sự cố y khoa 4 trẻ tử vong tại Bệnh viện Sản - Nhi Bắc Ninh" class="inner" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122100522697">Công bố kết luận về sự cố y khoa 4 trẻ tử vong tại Bệnh viện Sản - Nhi Bắc Ninh</a></h3>
+
+                            <ul class="list sub-list"><li><a href="di-ngoai-duong-mot-phu-nu-bi-dan-ban-thung-bung-20171121200638556.htm" title="Đi ngo&#224;i đường, một phụ nữ bị đạn bắn thủng bụng" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171121200638556">Đi ngoài đường, một phụ nữ bị đạn bắn thủng bụng</a></li><li><a href="su-that-ve-thit-lon-gia-re-ban-tran-lan-vua-ra-dong-gioi-da-bo-lom-nhom-20171121171629369.htm" title="Sự thật về thịt lợn gi&#225; rẻ b&#225;n tr&#224;n lan, vừa r&#227; đ&#244;ng gi&#242;i đ&#227; b&#242; lổm nhổm" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171121171629369">Sự thật về thịt lợn giá rẻ bán tràn lan, vừa rã đông giòi đã bò lổm nhổm</a></li></ul>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div data-check-position="soha_home_boxes_end"></div>*@
+
+
+
+
+                @*<div class="clearfix mgt34">
+                    <div data-check-position="soha_home_video_start"></div>
+
+                    <div id="sohaEmbedVideoZone" class="clearfix box-video init">
+                        <div class="clearfix relative">
+                            <p class="title fl"><span id="sohaEmbedVideoTitle">Video nổi bật</span><i class="ico-video"></i></p>
+                            <ul class="nav fr"><li></li><li></li><li></li></ul>
+                        </div>
+                        5266
+                        <div class="clearfix mgt14 vitem " data-title="Nga tiết lộ nhiều mẫu m&#225;y bay mới tại Triển l&#227;m Dubai 2017" data-embed="&lt;div class=&quot;VCSortableInPreviewMode&quot; type=&quot;VideoStream&quot; data-src=&quot;http://vcplayer.mediacdn.vn/1.1?_site=sohanews&amp;vid=sohanews/gmqoknm2sc6khccccccccccccli2yo/2017/11/22/22-russia-unveils-new-aerial-systems-at-2017-dubai-air-show-1511326127355-89d5b.mp4&amp;_listsuggest=http://s1.soha.vn/video/zone-0/suggest-videos.htm&amp;autoplay=true&amp;replay=false&amp;_info=7e048551eeb94e1d8e7994e0de46e6b0&amp;boxVideoID=ifVideo-71856&quot; data-filename=&quot;gmqoknm2sc6khccccccccccccli2yo/2017/11/22/22-russia-unveils-new-aerial-systems-at-2017-dubai-air-show-1511326127355-89d5b.mp4&quot; data-key=&quot;7e048551eeb94e1d8e7994e0de46e6b0&quot; data-width=&quot;660px&quot; data-height=&quot;370px&quot; videoid=&quot;71856&quot;&gt;&lt;/div&gt;">
+                            <img title="Nga tiết lộ nhiều mẫu m&#225;y bay mới tại Triển l&#227;m Dubai 2017"
+                                  alt="Nga tiết lộ nhiều mẫu m&#225;y bay mới tại Triển l&#227;m Dubai 2017"
+                                  src="video-thumbs.mediacdn.vn/sohanews/gmqoknm2sc6khccccccccccccli2yo/2017/11/22/22-russia-unveils-new-aerial-systems-at-2017-dubai-air-show-1511326127355-89d5b.jpg"
+                                  width="660" height="370" />
+                        </div>
+
+                        <div class="clearfix mgt14 vitem hidden" data-title="Y, B&#225;c sĩ lo ngại bị h&#224;nh hung tấn c&#244;ng bạo lực ở bệnh viện (Nguồn VTV1)" data-embed="&lt;div class=&quot;VCSortableInPreviewMode&quot; type=&quot;VideoStream&quot; data-src=&quot;http://vcplayer.mediacdn.vn/1.1?_site=sohanews&amp;vid=sohanews/sogqq4ed6urxwzyhcujcifkcg6cccc/2017/11/20/y-bac-si-lo-ngai-bi-hanh-hung-tan-cong-bao-luc-o-benh-vien-1511162622921-da6e5.mp4&amp;_listsuggest=http://s1.soha.vn/video/zone-0/suggest-videos.htm&amp;autoplay=true&amp;replay=false&amp;_info=eb38fe74dd3343f498c73bce30719aef&amp;boxVideoID=ifVideo-71684&quot; data-filename=&quot;sogqq4ed6urxwzyhcujcifkcg6cccc/2017/11/20/y-bac-si-lo-ngai-bi-hanh-hung-tan-cong-bao-luc-o-benh-vien-1511162622921-da6e5.mp4&quot; data-key=&quot;eb38fe74dd3343f498c73bce30719aef&quot; data-width=&quot;660px&quot; data-height=&quot;370px&quot; videoid=&quot;71684&quot;&gt;&lt;/div&gt;">
+
+                        </div>
+
+                        <div class="clearfix mgt14 vitem hidden" data-title="Gắn 50 chiếc iPhone quanh chiếc lốp &#244; t&#244; thả xuống đồi dốc." data-embed="&lt;div class=&quot;VCSortableInPreviewMode&quot; type=&quot;VideoStream&quot; data-src=&quot;http://vcplayer.mediacdn.vn/1.1?_site=sohanews&amp;vid=sohanews/i98e0vywyaal7ayfbwn6g8gm4oc8bz/2017/11/21/lan-doc-1511254949267-87f28.mp4&amp;_listsuggest=http://s1.soha.vn/video/zone-0/suggest-videos.htm&amp;autoplay=true&amp;replay=false&amp;_info=0eb291f6b5ad40b4b6465d411a2e362e&amp;boxVideoID=ifVideo-71775&quot; data-filename=&quot;i98e0vywyaal7ayfbwn6g8gm4oc8bz/2017/11/21/lan-doc-1511254949267-87f28.mp4&quot; data-key=&quot;0eb291f6b5ad40b4b6465d411a2e362e&quot; data-width=&quot;660px&quot; data-height=&quot;370px&quot; videoid=&quot;71775&quot;&gt;&lt;/div&gt;">
+
+                        </div>
+
+                    </div>
+                    <div data-check-position="soha_home_video_end"></div>
+                </div>
+
+                <div class="clearfix mgt34">
+                    <div class="list-topic-cate bd0">
+                        <div class="item-news-cate clearfix special-line" style="display: block">
+                        </div>
+                        <div class="item-news-cate bd0">
+                            <div data-check-position="soha_home_thread_start"></div>
+
+
+                            <div id="boxDongSuKien" class="slide-list slide6-contain " data-usepaging="True">
+                                <h3 class="title-slide">
+                                    Dòng sự kiện
+                                </h3>
+                                <div class="swiper-container pdb30 ">
+                                    <ul class="swiper-wrapper clearfix" data-boxtype="homenewsposition">
+                                        <li class="swiper-slide">
+                                            <div class="slide-wrap">
+                                                <a href="hoa-hau-dai-duong-2017-gay-tranh-cai-du-doi-e71774.htm" title="Hoa hậu Đại dương 2017 g&#226;y tranh c&#227;i dữ dội"><figure><img class="image" title="Hoa hậu Đại dương 2017 g&#226;y tranh c&#227;i dữ dội" alt="Hoa hậu Đại dương 2017 g&#226;y tranh c&#227;i dữ dội" src="sohanews.sohacdn.com/zoom/260_162/2017/abc-1509239043480.jpg" width="260" height="162" /><figcaption>Hoa hậu Đại dương 2017 gây tranh cãi dữ dội</figcaption></figure></a>
+                                                <div class="post-detail">
+
+                                                    <h3 class="title">
+                                                        <a href="hoa-hau-dai-duong-2017-gay-tranh-cai-du-doi-e71774.htm" title="" data-linktype="newsdetail" data-id="71774">Hoa hậu Đại dương 2017 gây tranh cãi dữ dội</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="slide-wrap">
+                                                <a href="nu-robot-sophia-va-the-gioi-nguoi-may-e71775.htm" title="Nữ robot Sophia v&#224; thế giới người m&#225;y"><figure><img title="Nữ robot Sophia v&#224; thế giới người m&#225;y" alt="Nữ robot Sophia v&#224; thế giới người m&#225;y" class="lazy image" data-original="http://sohanews.sohacdn.com/zoom/260_162/2017/n9xvln-1509247893557-0-8-359-586-crop-1509247911337-1509293894930.gif" width="260" height="162" src="sohanews.sohacdn.com/zoom/260_162/2017/n9xvln-1509247893557-0-8-359-586-crop-1509247911337-1509293894930.gif.png" /><noscript><img class=image title="Nữ robot Sophia v&#224; thế giới người m&#225;y" alt="Nữ robot Sophia v&#224; thế giới người m&#225;y" src="sohanews.sohacdn.com/zoom/260_162/2017/n9xvln-1509247893557-0-8-359-586-crop-1509247911337-1509293894930.gif" width="260" height="162" /></noscript><figcaption>Nữ robot Sophia và thế giới người máy</figcaption></figure></a>
+                                                <div class="post-detail">
+
+                                                    <h3 class="title">
+                                                        <a href="nu-robot-sophia-va-the-gioi-nguoi-may-e71775.htm" title="" data-linktype="newsdetail" data-id="71775">Nữ robot Sophia và thế giới người máy</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="slide-wrap">
+                                                <a href="chien-su-syria-e71762.htm" title="Chiến sự Syria"><figure><img class="image" title="Chiến sự Syria" alt="Chiến sự Syria" src="sohanews.sohacdn.com/zoom/260_162/2017/photo-1-1507266117119.jpg" width="260" height="162" /><figcaption>Chiến sự Syria</figcaption></figure></a>
+                                                <div class="post-detail">
+
+                                                    <h3 class="title">
+                                                        <a href="chien-su-syria-e71762.htm" title="" data-linktype="newsdetail" data-id="71762">Chiến sự Syria</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="slide-wrap">
+                                                <a href="ban-dao-trieu-tien-nong-vi-cang-thang-trump-kim-jong-un-e71756.htm" title="B&#225;n đảo Triều Ti&#234;n &quot;n&#243;ng&quot; v&#236; căng thẳng Trump-Kim Jong Un"><figure><img class="image" title="B&#225;n đảo Triều Ti&#234;n &quot;n&#243;ng&quot; v&#236; căng thẳng Trump-Kim Jong Un" alt="B&#225;n đảo Triều Ti&#234;n &quot;n&#243;ng&quot; v&#236; căng thẳng Trump-Kim Jong Un" src="sohanews.sohacdn.com/zoom/260_162/2017/image-1506395906993-crop-1506395917544.png" width="260" height="162" /><figcaption>Bán đảo Triều Tiên "nóng" vì căng thẳng Trump-Kim Jong Un</figcaption></figure></a>
+                                                <div class="post-detail">
+
+                                                    <h3 class="title">
+                                                        <a href="ban-dao-trieu-tien-nong-vi-cang-thang-trump-kim-jong-un-e71756.htm" title="" data-linktype="newsdetail" data-id="71756">Bán đảo Triều Tiên "nóng" vì căng thẳng Trump-Kim Jong Un</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="slide-wrap">
+                                                <a href="bai-hoc-cuoc-song-e71351.htm" title="B&#224;i học cuộc sống"><figure><img class="image" title="B&#224;i học cuộc sống" alt="B&#224;i học cuộc sống" src="sohanews.sohacdn.com/zoom/260_162/2016/8-1468032059773.jpg" width="260" height="162" /><figcaption>Bài học cuộc sống</figcaption></figure></a>
+                                                <div class="post-detail">
+
+                                                    <h3 class="title">
+                                                        <a href="bai-hoc-cuoc-song-e71351.htm" title="" data-linktype="newsdetail" data-id="71351">Bài học cuộc sống</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="slide-wrap">
+                                                <a href="phat-giao-va-cuoc-song-e71624.htm" title="Phật gi&#225;o v&#224; cuộc sống"><figure><img class="image" title="Phật gi&#225;o v&#224; cuộc sống" alt="Phật gi&#225;o v&#224; cuộc sống" src="sohanews.sohacdn.com/zoom/260_162/2017/image-2-1490598240875-1490598258660.png" width="260" height="162" /><figcaption>Phật giáo và cuộc sống</figcaption></figure></a>
+                                                <div class="post-detail">
+
+                                                    <h3 class="title">
+                                                        <a href="phat-giao-va-cuoc-song-e71624.htm" title="" data-linktype="newsdetail" data-id="71624">Phật giáo và cuộc sống</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="slide-wrap">
+                                                <a href="doc-nhanh-e71768.htm" title="Đọc nhanh"><figure><img class="image" title="Đọc nhanh" alt="Đọc nhanh" src="sohanews.sohacdn.com/zoom/260_162/2017/photo-1-1508370606460.jpg" width="260" height="162" /><figcaption>Đọc nhanh</figcaption></figure></a>
+                                                <div class="post-detail">
+
+                                                    <h3 class="title">
+                                                        <a href="doc-nhanh-e71768.htm" title="" data-linktype="newsdetail" data-id="71768">Đọc nhanh</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="swiper-button-next">
+                                        <a>&nbsp;</a>
+                                    </div>
+                                    <div class="swiper-button-prev">
+                                        <a>&nbsp;</a>
+                                    </div>
+
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+                            </div>
+                            <script>(runinit = window.runinit || []).push(function() { Slide6Swiper(); });</script>
+
+                            <div data-check-position="soha_home_thread_start"></div>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </div>
+    
+</div>

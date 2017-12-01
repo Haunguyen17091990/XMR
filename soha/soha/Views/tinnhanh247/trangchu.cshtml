@@ -1,0 +1,194 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    NewsRes item1 = ViewBag.it1 as NewsRes;
+    NewsRes item2 = ViewBag.it2 as NewsRes;
+    List<NewsRes> lst3News = ViewBag.it3 as List<NewsRes>;
+    List<NewsRes> lst4News = ViewBag.it4 as List<NewsRes>;
+
+    List<NewsRes> lst5News = ViewBag.it5 as List<NewsRes>;
+    List<NewsRes> lst6News = ViewBag.it6 as List<NewsRes>;
+}
+@using XRM.Business.DTO.Common
+<div class="main-container clearfix">
+    <div class="left-content clearfix">
+        <div class="groupleft clearfix" id="left-main-content">
+
+            <div data-check-position="soha_home_b1_start"></div>
+            <div class="box-special">
+                <ul class="list-special-news clearfix">
+                    @{
+                        <li data-boxtype="homenewsposition" class="item-special-new large" data-marked-zoneid="soha_home_b1">
+                            <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item1.Title, @item1.NewsID))" title="@item1.Title">
+                                <figure><img class='thumbs-img' onload="t_image = new Date().getTime();" title="@item1.Title" alt="@item1.Title" src="@item1.ImageTH" width="434" height="271" /><figcaption>@item1.Title</figcaption></figure>
+                                <script>t_after_image = new Date().getTime();</script>
+                            </a>
+                            <h3>
+                                <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item1.Title, @item1.NewsID))" title="@item1.Title" class="title-special" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122110034697">@item1.Title</a>
+                            </h3>
+                            <p class='sapo-special-new mgb0'>@item1.ShortContent</p>
+                        </li>
+                        <li data-boxtype="homenewsposition" class="item-special-new small" data-marked-zoneid="soha_home_b1">
+                            <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item2.Title, @item2.NewsID))" title="@item2.Title">
+                                <figure><img class='thumbs-img' onload="t_image = new Date().getTime();" title="@item2.Title" alt="@item2.Title" src="@item2.ImageTH" width="216" height="271" /><figcaption>@item2.Title</figcaption></figure>
+                                <script>t_after_image = new Date().getTime();</script>
+                            </a>
+                            <h3>
+                                <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item2.Title, @item2.NewsID))" title="@item2.Title" class="title-special" data-newstype="0" data-breakingnews="False" data-linktype="newsdetail" data-id="20171122101628619">@item2.Title</a>
+                            </h3>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div data-check-position="soha_home_b1_end"></div>
+
+            <div class="container-category" id="leftmedium">
+                <div data-check-position="soha_home_b2_start"></div>
+                <ul class="list-topic-cate bd0">
+                    <li class='item-news-cate clearfix pdt0 bdt0' data-marked-zoneid="soha_home_b2">
+                        <div id="slideMoiNhat" class="slide-list slide6-contain " data-usepaging="True">
+                            <h3 class="title-slide"></h3>
+                            <div class="swiper-container pdb30 ">
+                                <ul class="swiper-wrapper clearfix">
+                                    @{
+                                        foreach (NewsRes item3 in lst3News)
+                                        {
+                                            <li class="swiper-slide" data-boxtype="homenewsposition">
+                                                <div class="slide-wrap">
+                                                    <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item3.Title, @item3.NewsID))" title="@item3.Title"><figure><img class="image" title="@item3.Title" alt="@item3.Title" src="@item3.ImageTH" style="width:260px;height:162px !important" /><figcaption>@item3.Title</figcaption></figure></a>
+                                                    <div class="post-detail">
+                                                        <h3 class="title">
+                                                            <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item3.Title, @item3.NewsID))" title="@item3.Title" data-linktype="newsdetail" data-id="20171122002532244">@item3.Title</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+
+                                    }
+
+
+                                </ul>
+                                <div class="swiper-button-next">
+                                    <a>&nbsp;</a>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <a>&nbsp;</a>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+                        <script>(runinit = window.runinit || []).push(function () { Slide6Swiper(); });</script>
+
+                    </li>
+                </ul>
+                <div data-check-position="soha_home_b2_end"></div>
+
+                <ul class="list-topic-cate timeline epl-listdefault">
+                    @{
+                        foreach (NewsRes item4 in lst4News)
+                        {
+                            <li class='item-news-cate clearfix  related-news' data-boxtype="timelineposition" data-marked-zoneid="soha_home_bs1" data-locked="False" data-posid="0" data-newsid="20171122101322369" data-slottype='relatednews'>
+                                <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item4.Title, @item4.NewsID))" title="@item4.Title" class=""><figure><img style="width:260px;height:162px !important" class="thumbs-img" title="@item4.Title" alt="@item4.Title" src="@item4.ImageTH" width="260" height="162" /><figcaption>@item4.Title</figcaption></figure></a>
+                                <div class='info-new-cate elp-list'>
+                                    <h3><a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item4.Title, @item4.NewsID))" title="@item4.Title" class="title-new-cate" data-id="20171122101322369" newsid="20171122101322369" arrnewsid="20171122101322369">@item4.Title</a></h3>
+                                    <span class='sapo-new'>@item4.ShortContent</span>
+
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-check-position="soha_home_b3_1_end"></div>
+<div class="main-container clearfix home-main-bottom">
+    <div class="left-content clearfix pdt0">
+        <div class="groupleft clearfix" id="left-main-content2">
+            <div class="container-category mgt0" id="leftmedium2">
+                <ul class="list-topic-cate timeline epl-listdefault listtimelinelast bd0">
+                    <li class="item-news-cate bxmoinhat clearfix">
+                        <div data-check-position="soha_home_b4_start"></div>
+                        <div class="boxmoinhat" data-marked-zoneid="soha_home_b4">
+                            <div class="header-boxmoinhat">
+                                Mới nhất
+
+                                <div class="header-buttons">
+                                    <div class="page">0/0</div>
+                                    <div class="button b-up"></div>
+                                    <div class="button b-down"></div>
+                                </div>
+                            </div>
+                            <div class="body-boxmoinhat">
+                                <ul data-boxtype="recentnews" class="list-baimoinhat">
+                                    @{
+                                        foreach (NewsRes item5 in lst5News)
+                                        {
+                                            <li class='itembaimoinhat clearfix'>
+                                                <div class='clearfix'>
+                                                    <div class='time new'>
+                                                        @Convert.ToDateTime(item5.CreatedDate.ToString()).ToString("HH:mm")
+                                                    </div>
+                                                    <h3><a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item5.Title, @item5.NewsID))" class='title' title='@item5.Title' data-linktype="newsdetail" data-id="20171122133852197">@item5.Title</a></h3>
+                                                </div>
+                                            </li>
+                                        }
+                                    }
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-check-position="soha_home_b4_end"></div>
+                    </li>
+
+                    <li class="item-news-cate clearfix">
+                        <div data-check-position="soha_home_dbl_start"></div>
+                        <div id="slDungBoLo" class="slide-list timelineslide-contain ">
+                            <b>Đừng bỏ lỡ</b>
+                            <div class="swiper-container pdb30">
+                                <ul class="swiper-wrapper clearfix">
+                                    @{
+                                        foreach (NewsRes item6 in lst6News)
+                                        {
+                                            <li class="swiper-slide ">
+                                                <div class="slide-wrap">
+                                                    <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item6.Title, @item6.NewsID))" title="@item6.Title"><figure><img class="image" title="@item6.Title" alt="@item6.Title" src="@item6.ImageTH" style="width:260px;height:162px !important" /><figcaption>@item6.Title</figcaption></figure></a>
+                                                    <div class="post-detail">
+                                                        <h3 class="title">
+                                                            <a href="@("/tinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item6.Title, @item6.NewsID))" title='@item6.Title'>@item6.Title</a>
+                                                        </h3>
+                                                        <div class="summary">
+                                                            <div class='sm-detail'>
+                                                                &nbsp;<span class='comment view' data-newsId='20171121102904306'>@item6.ViewNumber</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        }
+                                    }
+                                </ul>
+                                <div class="swiper-button-next"><a rel="nofollow" href="javascript:void(0);">&nbsp;</a></div>
+                                <div class="swiper-button-prev"><a rel="nofollow" href="javascript:void(0);">&nbsp;</a></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <script>(runinit = window.runinit || []).push(function() {initTimelineSlide();});</script>
+                        </div>
+
+                        <div data-check-position="soha_home_dbl_end"></div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
