@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>soha</RootNamespace>
     <AssemblyName>soha</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,6 +45,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Owin.4.1.0\lib\net45\Autofac.Integration.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=4.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.4.1.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Core.DataAccess">
+      <HintPath>..\DLL.API\Core.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Infrastructure">
+      <HintPath>..\DLL.API\Core.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.MVC">
+      <HintPath>..\DLL.API\Core.MVC.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MDF.Utilites">
+      <HintPath>..\DLL.API\MDF.Utilites.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -77,19 +110,40 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SqlMapper">
+      <HintPath>..\packages\SqlMapper.1.1.3\lib\net45\SqlMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SqlMapper.Common, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlMapper.Common.1.1.3\lib\net45\SqlMapper.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -130,6 +184,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -195,10 +250,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Config\DependencyRegistrar.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MobileController.cs" />
+    <Compile Include="Controllers\tinnhanh247Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,11 +272,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\soha-repeat-x.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Styles\New\images\angle-button.png" />
+    <Content Include="Styles\New\skin\icon-clock.png" />
+    <Content Include="web_images\soha-sprite-v35.png" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -247,11 +308,15 @@
     <Content Include="sohanews.sohacdn.com\Icons\soha-72.png" />
     <Content Include="sohanews.sohacdn.com\Icons\soha-76.png" />
     <Content Include="sohanews.sohacdn.com\Icons\soha-96.png" />
+    <Content Include="sohanews.sohacdn.com\Styles\New\images\angle-button.png" />
     <Content Include="sohanews.sohacdn.com\thumb_w\260\2017\ava-share-1510623278040.png" />
     <Content Include="sohanews.sohacdn.com\web_css\css-home.331.css" />
     <Content Include="sohanews.sohacdn.com\web_css\css-home.334.css" />
+    <Content Include="sohanews.sohacdn.com\web_css\css-listnews.331.css" />
+    <Content Include="sohanews.sohacdn.com\web_css\css-listnews.338.css" />
     <Content Include="sohanews.sohacdn.com\web_images\EPL_img.png" />
     <Content Include="sohanews.sohacdn.com\web_js\js-home-async.331.js" />
+    <Content Include="sohanews.sohacdn.com\web_js\js-listnews.331.js" />
     <Content Include="sohanews.sohacdn.com\zoom\210_131\2017\photo-1-1511199479437-0-7-279-456-crop-1511199488652.gif.png" />
     <Content Include="sohanews.sohacdn.com\zoom\216_271\2017\image-1511322307928-0-0-440-352-crop-1511322316605.png" />
     <Content Include="sohanews.sohacdn.com\zoom\260_162\2016\8-1468032059773.jpg" />
@@ -345,6 +410,10 @@
     <Content Include="Views\Mobile\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutMobileDetail.cshtml" />
     <Content Include="Views\Mobile\Detail.cshtml" />
+    <Content Include="Views\tinnhanh247\trangchu.cshtml" />
+    <Content Include="Views\tinnhanh247\chitiet.cshtml" />
+    <Content Include="Views\tinnhanh247\danhmuc.cshtml" />
+    <Content Include="Views\Shared\_LayoutDanhMuc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="afamily.vn\" />
@@ -368,9 +437,21 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XRM.Business.DTO.Common\XRM.Business.DTO.Common.csproj">
+      <Project>{b3870acf-5029-4835-bbc8-35ff4add2f0c}</Project>
+      <Name>XRM.Business.DTO.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XRM.Business.Service.Common\XRM.Business.Service.Common.csproj">
+      <Project>{e5eedc78-3f83-4d2c-a0ef-90e62da3f8f7}</Project>
+      <Name>XRM.Business.Service.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

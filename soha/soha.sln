@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "soha", "soha\soha.csproj", "{1571F2D9-6404-4811-995A-2127C229DEF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRM.Business.DTO.Common", "XRM.Business.DTO.Common\XRM.Business.DTO.Common.csproj", "{B3870ACF-5029-4835-BBC8-35FF4ADD2F0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRM.Business.Service.Common", "XRM.Business.Service.Common\XRM.Business.Service.Common.csproj", "{E5EEDC78-3F83-4D2C-A0EF-90E62DA3F8F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1571F2D9-6404-4811-995A-2127C229DEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1571F2D9-6404-4811-995A-2127C229DEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1571F2D9-6404-4811-995A-2127C229DEF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3870ACF-5029-4835-BBC8-35FF4ADD2F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3870ACF-5029-4835-BBC8-35FF4ADD2F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3870ACF-5029-4835-BBC8-35FF4ADD2F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3870ACF-5029-4835-BBC8-35FF4ADD2F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5EEDC78-3F83-4D2C-A0EF-90E62DA3F8F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EEDC78-3F83-4D2C-A0EF-90E62DA3F8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EEDC78-3F83-4D2C-A0EF-90E62DA3F8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EEDC78-3F83-4D2C-A0EF-90E62DA3F8F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
