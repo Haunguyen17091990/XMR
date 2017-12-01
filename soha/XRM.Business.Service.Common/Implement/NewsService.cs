@@ -28,22 +28,22 @@ namespace XRM.Business.Service.Common
         {
             return _ObjReadOnlyRepository.Value.StoreProcedureQuery<NewsRes>("News_Search");
         }
-        public NewsRes ReadByID(int _ID)
-        {
-            //return _ObjReadOnlyRepository.Value.StoreProcedureQuery<NewsRes>("SCM.Customer_Search", new
-            //{
-            //    ID = _ID
-            //}, commandType: CommandType.StoredProcedure).ToArray()[0];
-            return new NewsRes();
-        }
-        public IEnumerable<NewsRes> ReadByCate(int _ID)
-        {
-            //return _ObjReadOnlyRepository.Value.StoreProcedureQuery<NewsRes>("SCM.Customer_Search", new
-            //{
-            //    ID = _ID
-            //}, commandType: CommandType.StoredProcedure).ToArray()[0];
-            return new List<NewsRes>();
-        }
+        //public NewsRes ReadByID(int _ID)
+        //{
+        //    //return _ObjReadOnlyRepository.Value.StoreProcedureQuery<NewsRes>("SCM.Customer_Search", new
+        //    //{
+        //    //    ID = _ID
+        //    //}, commandType: CommandType.StoredProcedure).ToArray()[0];
+        //    return new NewsRes();
+        //}
+        //public IEnumerable<NewsRes> ReadByCate(int _ID)
+        //{
+        //    //return _ObjReadOnlyRepository.Value.StoreProcedureQuery<NewsRes>("SCM.Customer_Search", new
+        //    //{
+        //    //    ID = _ID
+        //    //}, commandType: CommandType.StoredProcedure).ToArray()[0];
+        //    return new List<NewsRes>();
+        //}
 
         public CreateRes<int> Create(NewsInsertReq Obj, int UserID)
         {
