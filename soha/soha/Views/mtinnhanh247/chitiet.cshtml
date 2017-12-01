@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "chitiet";
+    Layout = "~/Views/Shared/_LayoutMobileDetail.cshtml";
+    NewsRes item1 = ViewBag.it1 as NewsRes;
+    List<NewsRes> item2 = ViewBag.it2 as List<NewsRes>;
+    List<NewsRes> item3 = ViewBag.it3 as List<NewsRes>;
+}
+@using XRM.Business.DTO.Common
+
+<div class="news-detail-container">
+    @{
+        <h1 class="post-title">@item1.Title</h1>
+
+        <div class="detail-cover">
+            <img src="@item1.ImageFull" alt="" />
+        </div>
+        <div class="sapo">@item1.ShortContent</div>
+
+        <div class="post-content">
+            @item1.Content
+        </div>
+    }
+</div>
+<div id="othernews-bycate" class="other-news-bycate-container">
+    <div class="box-header">
+        <span class="box-header-title mr-20 active" tab-rel="0">Cùng mục</span>
+        <span class="box-header-title" tab-rel="1">Đang hot</span>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <ul class="list-news">
+                    @{
+                        foreach (NewsRes item in item2)
+                        {
+                            <li class="news-item">
+                                <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item.Title, @item.NewsID))" title="@item.Title" class="post-ava">
+                                    <img src="@item.ImageTH" alt="" />
+                                </a>
+                                <h3 class="news-title">
+                                    <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item.Title, @item.NewsID))">@item.Title</a>
+                                </h3>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="list-news">
+                    @{
+                        foreach (NewsRes item in item3)
+                        {
+                            <li class="news-item">
+                                <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item.Title, @item.NewsID))" title="@item.Title" class="post-ava">
+                                    <img src="@item.ImageTH" alt="" />
+                                </a>
+                                <h3 class="news-title">
+                                    <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item.Title, @item.NewsID))">@item.Title</a>
+                                </h3>
+                            </li>
+                            }
+                        }
+                </ul>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+

@@ -255,6 +255,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MobileController.cs" />
+    <Compile Include="Controllers\mtinnhanh247Controller.cs" />
     <Compile Include="Controllers\tinnhanh247Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -278,6 +279,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="sohanews.sohacdn.com\web_js\soha.home.06.09.2017.js" />
     <Content Include="Styles\New\images\angle-button.png" />
     <Content Include="Styles\New\skin\icon-clock.png" />
     <Content Include="web_images\soha-sprite-v35.png" />
@@ -414,6 +416,8 @@
     <Content Include="Views\tinnhanh247\chitiet.cshtml" />
     <Content Include="Views\tinnhanh247\danhmuc.cshtml" />
     <Content Include="Views\Shared\_LayoutDanhMuc.cshtml" />
+    <Content Include="Views\mtinnhanh247\trangchu.cshtml" />
+    <Content Include="Views\mtinnhanh247\chitiet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="afamily.vn\" />
