@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "danhmuc";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+    NewsRes item1 = ViewBag.it1 as NewsRes;
+    List<NewsRes> item2 = ViewBag.it2 as List<NewsRes>;
+    List<NewsRes> item3 = ViewBag.it3 as List<NewsRes>;
+}
+@using XRM.Business.DTO.Common
+
+<div class="featured-news">
+    @{
+        <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item1.Title, @item1.NewsID))" title="@item1.Title" class="post-ava open-popup">
+            <img alt="@item1.Title" class="lazy" data-src="@item1.ImageTH" src="@item1.ImageTH" />
+            <span class="headline-icon">Tiêu điểm</span>
+        </a>
+        <h3 class="title">
+            <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item1.Title, @item1.NewsID))" class="open-popup">@item1.Title</a>
+        </h3>
+        <div class="sapo">
+            <a class="cat fl" href="@("/tinnhanh247/danhmuc/" + MDF.Utilites.Helper.StringHelper.ToUrl("thoi-su", "1"))">Thời sự</a>
+            @item1.ShortContent
+        </div>
+        <!--Relation of Top 1-->
+    }
+</div>
+
+<ul class="list-daily-hot-news focus" id="nb2">
+    @{
+        foreach (NewsRes item in item2)
+        {
+            <li class="daily-hot-news clearfix">
+                <h3 class="title">
+                    <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item.Title, @item.NewsID))" title="@item.Title" class="open-popup">@item.Title</a>
+                </h3>
+                <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item.Title, @item.NewsID))" title="@item.Title" class="post-ava open-popup">
+                    <img alt="@item.Title" class="lazy" data-src="@item.ImageTH" src="@item.ImageTH" />
+                </a>
+                <div class="sapo">
+                    @item.ShortContent
+                </div>
+            </li>
+        }
+    }
+</ul>
+<ul class="list-daily-hot-news" id="list_focus3">
+    @{
+        foreach (NewsRes item in item3)
+        {
+            <li class="daily-hot-news clearfix">
+                <h3 class="title">
+                    <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item.Title, @item.NewsID))" title="@item.Title" class="open-popup">@item.Title</a>
+                </h3>
+                <a href="@("/mtinnhanh247/chitiet/" + MDF.Utilites.Helper.StringHelper.ToUrl(@item.Title, @item.NewsID))" title="@item.Title" class="post-ava open-popup">
+                    <img alt="@item.Title" class="lazy" data-src="@item.ImageTH" src="@item.ImageTH" />
+                </a>
+                <div class="sapo">
+                    @item.ShortContent
+                </div>
+            </li>
+        }
+    }
+</ul>

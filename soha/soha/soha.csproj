@@ -418,6 +418,7 @@
     <Content Include="Views\Shared\_LayoutDanhMuc.cshtml" />
     <Content Include="Views\mtinnhanh247\trangchu.cshtml" />
     <Content Include="Views\mtinnhanh247\chitiet.cshtml" />
+    <Content Include="Views\mtinnhanh247\danhmuc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="afamily.vn\" />

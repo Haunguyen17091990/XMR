@@ -70,5 +70,20 @@ namespace soha.Controllers
             ViewBag.it3 = lst3News;
             return View();
         }
+        public ActionResult danhmuc(int ID)
+        {
+            List<NewsRes> lstNews = _ObjNewsService.Search() as List<NewsRes>;
+            //lấy 1 mẫu tin cho phần 1
+            NewsRes it1News = lstNews.Where(c => c.TypeID == ID).Take(1).FirstOrDefault();
+            //lấy 8 mẫu tin cho phần 2
+            List<NewsRes> it2News = lstNews.Where(c => c.TypeID == ID && c.NewsID!=it1News.NewsID).OrderByDescending(c=>c.ViewNumber).Take(8).ToList();
+            //lấy 50 mẫu tin cho phần 5 
+            List<int> id2 = it2News.Select(c => c.NewsID).ToList();
+            List<NewsRes> lst3News = lstNews.Where(c =>c.TypeID==ID && c.NewsID!=it1News.NewsID && !id2.Contains(c.NewsID)).OrderByDescending(c => c.ViewNumber).Take(50).ToList();
+            ViewBag.it1 = it1News;
+            ViewBag.it2 = it2News;
+            ViewBag.it3 = lst3News;
+            return View();
+        }
     }
 }
