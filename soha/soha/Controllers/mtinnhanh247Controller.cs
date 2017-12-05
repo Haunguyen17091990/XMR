@@ -56,11 +56,13 @@ namespace soha.Controllers
             ViewBag.it5 = lst5News;
             return View();
         }
-        public ActionResult chitiet(int ID)
+        public ActionResult chitiet(string ID)
         {
+            var arrtemp = ID.Split('-');
+            string strFeedId = arrtemp[arrtemp.Length - 1];
             //lấy 1 mẫu tin cho phần 2
             List<NewsRes> lstNews = _ObjNewsService.Search() as List<NewsRes>;
-            NewsRes it1News = lstNews.Where(c => c.NewsID == ID).FirstOrDefault();
+            NewsRes it1News = lstNews.Where(c => c.NewsID == Convert.ToInt32(strFeedId)).FirstOrDefault();
             //cung danh muc
             List<NewsRes> lst2News = lstNews.Where(c => c.TypeID == it1News.TypeID && c.NewsID!=it1News.NewsID).OrderByDescending(c => c.ViewNumber).Take(3).ToList();
             //dang hot
@@ -70,16 +72,18 @@ namespace soha.Controllers
             ViewBag.it3 = lst3News;
             return View();
         }
-        public ActionResult danhmuc(int ID)
+        public ActionResult danhmuc(string ID)
         {
+            var arrtemp = ID.Split('-');
+            string strFeedId = arrtemp[arrtemp.Length - 1];
             List<NewsRes> lstNews = _ObjNewsService.Search() as List<NewsRes>;
             //lấy 1 mẫu tin cho phần 1
-            NewsRes it1News = lstNews.Where(c => c.TypeID == ID).Take(1).FirstOrDefault();
+            NewsRes it1News = lstNews.Where(c => c.TypeID == Convert.ToInt32(strFeedId)).Take(1).FirstOrDefault();
             //lấy 8 mẫu tin cho phần 2
-            List<NewsRes> it2News = lstNews.Where(c => c.TypeID == ID && c.NewsID!=it1News.NewsID).OrderByDescending(c=>c.ViewNumber).Take(8).ToList();
+            List<NewsRes> it2News = lstNews.Where(c => c.TypeID == Convert.ToInt32(strFeedId) && c.NewsID!=it1News.NewsID).OrderByDescending(c=>c.ViewNumber).Take(8).ToList();
             //lấy 50 mẫu tin cho phần 5 
             List<int> id2 = it2News.Select(c => c.NewsID).ToList();
-            List<NewsRes> lst3News = lstNews.Where(c =>c.TypeID==ID && c.NewsID!=it1News.NewsID && !id2.Contains(c.NewsID)).OrderByDescending(c => c.ViewNumber).Take(50).ToList();
+            List<NewsRes> lst3News = lstNews.Where(c =>c.TypeID== Convert.ToInt32(strFeedId) && c.NewsID!=it1News.NewsID && !id2.Contains(c.NewsID)).OrderByDescending(c => c.ViewNumber).Take(50).ToList();
             ViewBag.it1 = it1News;
             ViewBag.it2 = it2News;
             ViewBag.it3 = lst3News;
