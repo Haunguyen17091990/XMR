@@ -280,6 +280,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sohanews.sohacdn.com\mob_css\soha.home.01.11.2017.02.css" />
+    <Content Include="sohanews.sohacdn.com\web_css\css-newsdetail.331.css" />
     <Content Include="sohanews.sohacdn.com\web_js\soha.home.06.09.2017.js" />
     <Content Include="Styles\New\images\angle-button.png" />
     <Content Include="Styles\New\skin\icon-clock.png" />
