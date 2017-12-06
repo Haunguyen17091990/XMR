@@ -34,6 +34,10 @@ namespace soha.Controllers
         // GET: mtinnhanh247
         public ActionResult trangchu()
         {
+            if (!MvcApplication.IsMobileMode())
+            {
+                return RedirectToAction("trangchu", "tinnhanh247");
+            }
             List<NewsRes> lstNews = _ObjNewsService.Search() as List<NewsRes>;
             //lấy 1 mẫu tin cho phần 1
             NewsRes it1News = lstNews.Where(c => c.TypeID == 7).Take(1).FirstOrDefault();
@@ -58,6 +62,10 @@ namespace soha.Controllers
         }
         public ActionResult chitiet(string ID)
         {
+            if (!MvcApplication.IsMobileMode())
+            {
+                return RedirectToAction("chitiet", "tinnhanh247", new { ID = ID });
+            }
             var arrtemp = ID.Split('-');
             string strFeedId = arrtemp[arrtemp.Length - 1];
             //lấy 1 mẫu tin cho phần 2
@@ -74,6 +82,10 @@ namespace soha.Controllers
         }
         public ActionResult danhmuc(string ID)
         {
+            if (!MvcApplication.IsMobileMode())
+            {
+                return RedirectToAction("danhmuc", "tinnhanh247", new { ID = ID });
+            }
             var arrtemp = ID.Split('-');
             string strFeedId = arrtemp[arrtemp.Length - 1];
             List<NewsRes> lstNews = _ObjNewsService.Search() as List<NewsRes>;
@@ -81,7 +93,7 @@ namespace soha.Controllers
             NewsRes it1News = lstNews.Where(c => c.TypeID == Convert.ToInt32(strFeedId)).Take(1).FirstOrDefault();
             //lấy 8 mẫu tin cho phần 2
             List<NewsRes> it2News = lstNews.Where(c => c.TypeID == Convert.ToInt32(strFeedId) && c.NewsID!=it1News.NewsID).OrderByDescending(c=>c.ViewNumber).Take(8).ToList();
-            //lấy 50 mẫu tin cho phần 5 
+            //lấy 50 mẫu tin cho phần 5. 
             List<int> id2 = it2News.Select(c => c.NewsID).ToList();
             List<NewsRes> lst3News = lstNews.Where(c =>c.TypeID== Convert.ToInt32(strFeedId) && c.NewsID!=it1News.NewsID && !id2.Contains(c.NewsID)).OrderByDescending(c => c.ViewNumber).Take(50).ToList();
             ViewBag.it1 = it1News;

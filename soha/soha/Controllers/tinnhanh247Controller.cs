@@ -33,6 +33,10 @@ namespace soha.Controllers
         }
         public ActionResult trangchu()
         {
+            if (MvcApplication.IsMobileMode())
+            {
+                return RedirectToAction("trangchu", "mtinnhanh247");
+            }
             List<NewsRes> lstNews = _ObjNewsService.Search() as List<NewsRes>;
             //lấy 1 mẫu tin cho phần 1
             NewsRes it1News = lstNews.Where(c => c.TypeID == 10).Take(1).FirstOrDefault();
@@ -55,7 +59,11 @@ namespace soha.Controllers
             return View();
         }
         public ActionResult chitiet(string ID)
-        {
+        { 
+            if (MvcApplication.IsMobileMode())
+            {
+                return RedirectToAction("chitiet", "mtinnhanh247", new { ID = ID });
+            }
             var arrtemp = ID.Split('-');
             string strFeedId = arrtemp[arrtemp.Length - 1];
             //lấy 1 mẫu tin cho phần 2
@@ -75,6 +83,10 @@ namespace soha.Controllers
 
         public ActionResult danhmuc(string ID)
         {
+            if (MvcApplication.IsMobileMode())
+            {
+                return RedirectToAction("danhmuc", "mtinnhanh247", new { ID = ID });
+            }
             var arrtemp = ID.Split('-');
             string strFeedId = arrtemp[arrtemp.Length - 1];
             List<NewsRes> lstNews = _ObjNewsService.Search() as List<NewsRes>;
