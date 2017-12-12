@@ -1,0 +1,97 @@
+﻿
+@{
+    NewsRes itemDetail2 = ViewBag.itDetail2 as NewsRes;
+    NewsRes itemDetail3 = ViewBag.itDetail3 as NewsRes;
+    NewsRes itemDetail4 = ViewBag.itDetail4 as NewsRes;
+    List<NewsRes> lst5News = ViewBag.itDetail5 as List<NewsRes>;
+    ViewBag.Title = itemDetail2.Title;
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+
+}
+@using ResearchWeb.Models
+<div class="clearfix mgt15">
+    <div class="w980 fl news-detail default epl-default adm-leftsection">
+        <main>
+            <article>
+                @{
+                    <header>
+                        <h1 class="news-title" data-field="title">
+                            @itemDetail2.Title
+                        </h1>
+                        <div class="mgt15 clearfix">
+                        </div>
+                        <div class="mgt10 clearfix"></div>
+                    </header>
+                    <div class="clearfix mgt15">
+                        <div class="detail-body">
+                            @Html.Raw(itemDetail2.Content)
+                            <p style="float:right;padding:10px">Theo soha.vn</p>
+                        </div>
+                    </div>
+                }
+            </article>
+        </main>
+    </div>
+</div>
+<div id="adm_sponsor_footer1"></div>
+<div class="clr" id="admStickyFooter"></div>
+<div class="clr" id="adm_sticky_footer"></div>
+<div class="clearfix">
+    <div class="boxSameZone" id="boxSameZone">
+        <b>Cùng chuyên mục</b>
+        <div class="fl">
+            <div class="first">
+                @{
+                    <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@itemDetail3.GetFriendlyTitle()-@itemDetail3.NewsID" title="@itemDetail3.Title">
+                        <figure>
+                            <img class="" title="@itemDetail3.Title" alt="@itemDetail3.Title" src="@itemDetail3.ImageTH" style="width:390px;height:245px !important" />
+                            <figcaption>@itemDetail3.Title</figcaption>
+                        </figure>
+                    </a>
+                    <h3>
+                        <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@itemDetail3.GetFriendlyTitle()-@itemDetail3.NewsID" title="@itemDetail3.Title">@itemDetail3.Title</a>
+                    </h3>
+                    <p>@itemDetail3.ShortContent</p>
+                }
+            </div>
+            <div class="second">
+                @{
+                    <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@itemDetail4.GetFriendlyTitle()-@itemDetail4.NewsID" title="@itemDetail4.Title">
+                        <figure>
+                            <img class="" title="@itemDetail4.Title" alt="@itemDetail4.Title" src="@itemDetail4.ImageTH" style="width:250px;height:156px !important" />
+                            <figcaption>@itemDetail4.Title</figcaption>
+                        </figure>
+                    </a>
+                    <h3>
+                        <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@itemDetail4.GetFriendlyTitle()-@itemDetail4.NewsID" title="@itemDetail4.Title">@itemDetail4.Title</a>
+                    </h3>
+                    <p>@itemDetail4.ShortContent</p>
+                }
+            </div>
+            <div class="clearfix old"></div>
+        </div>
+        <div class="fr">
+            <ul>
+                @{
+                    foreach (NewsRes item5 in lst5News)
+                    {
+                        <li class="clearfix">
+                            <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item5.GetFriendlyTitle()-@item5.NewsID" title="@item5.Title">
+                                <figure>
+                                    <img class="" title="@item5.Title" alt="@item5.Title" src="@item5.ImageTH" style="width:110px;height:70px !important" />
+                                    <figcaption>@item5.Title</figcaption>
+                                </figure>
+                            </a>
+                            <div class="tt">
+                                <a class="bTitle" asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item5.GetFriendlyTitle()-@item5.NewsID" title="@item5.Title">@item5.Title</a>
+                                <span title="@Convert.ToDateTime(item5.CreatedDate.ToString()).ToString("dd/MM/yyyy HH:mm")"></span>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
