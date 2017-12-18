@@ -70,25 +70,32 @@ namespace soha.Controllers
         }
         public ActionResult chitiet(string ID)
         {
-            if (objUtil.fBrowserIsMobile())
+            try
             {
-                return RedirectToAction("chitiet", "mtinnhanh247", new { ID = ID });
-            }
-            var arrtemp = ID.Split('-');
-            string strFeedId = arrtemp[arrtemp.Length - 1];
-            //lấy 1 mẫu tin cho phần 2
-            DBContext context = HttpContext.RequestServices.GetService(typeof(DBContext)) as DBContext;
-            List<NewsRes> lstNews = context.GetAllNewsRes() as List<NewsRes>;
-            NewsRes it2News = lstNews.Where(c => c.NewsID == Convert.ToInt32(strFeedId)).FirstOrDefault();
-            //cung danh muc
-            NewsRes it3News = lstNews.Where(c => c.TypeID == it2News.TypeID).Skip(1).OrderByDescending(c => c.ViewNumber).FirstOrDefault();
-            NewsRes it4News = lstNews.Where(c => c.TypeID == it2News.TypeID).Skip(2).Take(1).OrderByDescending(c => c.ViewNumber).FirstOrDefault();
-            List<NewsRes> lst5News = lstNews.Where(c => c.TypeID == it2News.TypeID).OrderByDescending(c => c.ViewNumber).Skip(3).Take(4).ToList();
+                if (objUtil.fBrowserIsMobile())
+                {
+                    return RedirectToAction("chitiet", "mtinnhanh247", new { ID = ID });
+                }
+                var arrtemp = ID.Split('-');
+                string strFeedId = arrtemp[arrtemp.Length - 1];
+                //lấy 1 mẫu tin cho phần 2
+                DBContext context = HttpContext.RequestServices.GetService(typeof(DBContext)) as DBContext;
+                List<NewsRes> lstNews = context.GetAllNewsRes() as List<NewsRes>;
+                NewsRes it2News = lstNews.Where(c => c.NewsID == Convert.ToInt32(strFeedId)).FirstOrDefault();
+                //cung danh muc
+                NewsRes it3News = lstNews.Where(c => c.TypeID == it2News.TypeID).Skip(1).OrderByDescending(c => c.ViewNumber).FirstOrDefault();
+                NewsRes it4News = lstNews.Where(c => c.TypeID == it2News.TypeID).Skip(2).Take(1).OrderByDescending(c => c.ViewNumber).FirstOrDefault();
+                List<NewsRes> lst5News = lstNews.Where(c => c.TypeID == it2News.TypeID).OrderByDescending(c => c.ViewNumber).Skip(3).Take(4).ToList();
 
-            ViewBag.itDetail2 = it2News;
-            ViewBag.itDetail3 = it3News;
-            ViewBag.itDetail4 = it4News;
-            ViewBag.itDetail5 = lst5News;
+                ViewBag.itDetail2 = it2News;
+                ViewBag.itDetail3 = it3News;
+                ViewBag.itDetail4 = it4News;
+                ViewBag.itDetail5 = lst5News;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return View();
         }
 

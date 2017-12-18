@@ -27,7 +27,7 @@ namespace ResearchWeb.Models
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from News order by CreatedDate desc limit 500", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from news order by CreatedDate desc limit 500", conn);
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
