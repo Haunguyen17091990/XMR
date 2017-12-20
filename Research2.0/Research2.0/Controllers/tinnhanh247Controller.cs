@@ -91,6 +91,9 @@ namespace soha.Controllers
                 ViewBag.itDetail3 = it3News;
                 ViewBag.itDetail4 = it4News;
                 ViewBag.itDetail5 = lst5News;
+
+                //update viewnumber
+                context.Update(Convert.ToInt32(strFeedId));
             }
             catch (Exception ex)
             {

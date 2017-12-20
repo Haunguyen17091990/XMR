@@ -75,6 +75,7 @@ namespace soha.Controllers
             ViewBag.it1 = it1News;
             ViewBag.it2 = lst2News;
             ViewBag.it3 = lst3News;
+            context.Update(Convert.ToInt32(strFeedId));
             return View();
         }
         public ActionResult danhmuc(string ID)
