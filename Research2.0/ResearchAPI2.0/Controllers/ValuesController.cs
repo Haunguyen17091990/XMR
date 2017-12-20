@@ -43,11 +43,13 @@ namespace ResearchAPI2._0.Controllers
         {
         }
         // POST api/values
-        [HttpPost]
-        public void Insert(List<NewsRes> lstIns)
-        {
+        [HttpPost("Insert")]
+        public bool Insert([FromBody] List<NewsRes> lstIns)
+        { 
             Conn myConnect = new Conn();
             myConnect.Insert(lstIns);
-        }
+
+            return true;
+        } 
     }
 }
