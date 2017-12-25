@@ -20,11 +20,11 @@
                         </h1>
                         <div class="mgt15 clearfix">
                         </div>
-                        <figure>
+                        @*<figure>
                             <img src="@itemDetail2.ImageFull" width="660" title="@itemDetail2.Title" alt="@itemDetail2.Title" data-field="firstphoto" style="margin: 0 auto;">
                             
                             <figcaption>@itemDetail2.Title</figcaption>
-                        </figure>
+                        </figure>*@
                         <div class="mgt10 clearfix"></div>
                     </header>
                     <div class="clearfix mgt15">
@@ -47,28 +47,28 @@
         <div class="fl">
             <div class="first">
                 @{
-                    <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@itemDetail3.GetFriendlyTitle()-@itemDetail3.NewsID" title="@itemDetail3.Title">
+                    <a href="/@itemDetail3.TypeName/@itemDetail3.GetFriendlyTitle()/@(itemDetail3.NewsID).html" title="@itemDetail3.Title">
                         <figure>
                             <img class="" title="@itemDetail3.Title" alt="@itemDetail3.Title" src="@itemDetail3.ImageTH" style="width:390px;height:245px !important" />
                             <figcaption>@itemDetail3.Title</figcaption>
                         </figure>
                     </a>
                     <h3>
-                        <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@itemDetail3.GetFriendlyTitle()-@itemDetail3.NewsID" title="@itemDetail3.Title">@itemDetail3.Title</a>
+                        <a href="/@itemDetail3.TypeName/@itemDetail3.GetFriendlyTitle()/@(itemDetail3.NewsID).html" title="@itemDetail3.Title">@itemDetail3.Title</a>
                     </h3>
                     <p>@itemDetail3.ShortContent</p>
                 }
             </div>
             <div class="second">
                 @{
-                    <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@itemDetail4.GetFriendlyTitle()-@itemDetail4.NewsID" title="@itemDetail4.Title">
-                        <figure>
-                            <img class="" title="@itemDetail4.Title" alt="@itemDetail4.Title" src="@itemDetail4.ImageTH" style="width:250px;height:156px !important" />
-                            <figcaption>@itemDetail4.Title</figcaption>
-                        </figure>
-                    </a>
+                <a href="/@itemDetail4.TypeName/@itemDetail4.GetFriendlyTitle()/@(itemDetail4.NewsID).html" title="@itemDetail4.Title">
+                    <figure>
+                        <img class="" title="@itemDetail4.Title" alt="@itemDetail4.Title" src="@itemDetail4.ImageTH" style="width:250px;height:156px !important" />
+                        <figcaption>@itemDetail4.Title</figcaption>
+                    </figure>
+                </a>
                     <h3>
-                        <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@itemDetail4.GetFriendlyTitle()-@itemDetail4.NewsID" title="@itemDetail4.Title">@itemDetail4.Title</a>
+                        <a href="/@itemDetail4.TypeName/@itemDetail4.GetFriendlyTitle()/@(itemDetail4.NewsID).html" title="@itemDetail4.Title">@itemDetail4.Title</a>
                     </h3>
                     <p>@itemDetail4.ShortContent</p>
                 }
@@ -81,14 +81,16 @@
                     foreach (NewsRes item5 in lst5News)
                     {
                         <li class="clearfix">
-                            <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item5.GetFriendlyTitle()-@item5.NewsID" title="@item5.Title">
+                            <a href="/@item5.TypeName/@item5.GetFriendlyTitle()/@(item5.NewsID).html" title="@item5.Title">
                                 <figure>
                                     <img class="" title="@item5.Title" alt="@item5.Title" src="@item5.ImageTH" style="width:110px;height:70px !important" />
                                     <figcaption>@item5.Title</figcaption>
                                 </figure>
                             </a>
                             <div class="tt">
-                                <a class="bTitle" asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item5.GetFriendlyTitle()-@item5.NewsID" title="@item5.Title">@item5.Title</a>
+                                <a class="bTitle" href="/@item5.TypeName/@item5.GetFriendlyTitle()/@(item5.NewsID).html" title="@item5.Title">
+                                    @item5.Title
+                                </a>
                                 <span title="@Convert.ToDateTime(item5.CreatedDate.ToString()).ToString("dd/MM/yyyy HH:mm")"></span>
                             </div>
                         </li>

@@ -36,11 +36,13 @@
                         foreach (NewsRes item in item2)
                         {
                             <li class="news-item">
-                                <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID" title="@item.Title" class="post-ava">
+                                <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title" class="post-ava">
                                     <img src="@item.ImageTH" alt="" />
                                 </a>
                                 <h3 class="news-title">
-                                    <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID">@item.Title</a>
+                                    <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title">
+                                        @item.Title
+                                    </a>
                                 </h3>
                             </li>
                         }
@@ -53,15 +55,17 @@
                         foreach (NewsRes item in item3)
                         {
                             <li class="news-item">
-                                <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID" title="@item.Title" class="post-ava">
+                                <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title" class="post-ava">
                                     <img src="@item.ImageTH" alt="" />
                                 </a>
                                 <h3 class="news-title">
-                                    <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID">@item.Title</a>
+                                    <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title">
+                                        @item.Title
+                                    </a>
                                 </h3>
                             </li>
-                            }
                         }
+                    }
                 </ul>
             </div>
         </div>

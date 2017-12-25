@@ -12,12 +12,14 @@
 @using ResearchWeb.Models
 <div class="featured-news">
     @{
-        <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item1.GetFriendlyTitle()-@item1.NewsID" title="@item1.Title" class="post-ava open-popup">
-            <img alt="@item1.Title" class="lazy" data-src="@item1.ImageTH" src="@item1.ImageTH" />
+        <a href="/m.@item1.TypeName/@item1.GetFriendlyTitle()/@(item1.NewsID).html" title="@item1.Title" class="post-ava open-popup">
+            <img alt="@item1.GetFriendlyTitle()" class="lazy" data-src="@item1.ImageTH" src="@item1.ImageTH" />
             <span class="headline-icon">Tiêu điểm</span>
         </a>
         <h3 class="title">
-            <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item1.GetFriendlyTitle()-@item1.NewsID" class="open-popup">@item1.Title</a>
+            <a href="/m.@item1.TypeName/@item1.GetFriendlyTitle()/@(item1.NewsID).html" title="@item1.Title" class="open-popup">
+                @item1.Title
+            </a>
         </h3>
         <div class="sapo">
             <a class="cat fl" asp-controller="mtinnhanh247" asp-action="danhmuc" asp-route-id="1" title="thoi su">Thời sự</a>
@@ -33,9 +35,9 @@
         {
             <li class="daily-hot-news clearfix">
                 <h3 class="title">
-                    <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID" title="@item.Title" class="open-popup">@item.Title</a>
+                    <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title" class="open-popup">@item.Title</a>
                 </h3>
-                <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID" title="@item.Title" class="post-ava open-popup">
+                <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title" class="post-ava open-popup">
                     <img alt="@item.Title" class="lazy" data-src="@item.ImageTH" src="@item.ImageTH" />
                 </a>
                 <div class="sapo">
@@ -53,9 +55,9 @@
         {
             <li class="daily-hot-news clearfix">
                 <h3 class="title">
-                    <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID" title="@item.Title" class="open-popup">@item.Title</a>
+                    <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title" class="open-popup">@item.Title</a>
                 </h3>
-                <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID" title="@item.Title" class="post-ava open-popup">
+                <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title" class="post-ava open-popup">
                     <img alt="@item.Title" class="lazy" data-src="@item.ImageTH" src="@item.ImageTH" />
                 </a>
                 <div class="sapo">
@@ -78,7 +80,7 @@
                 {
                     <li class="dnuc-news">
                         <h3 class="dnuc-news-title">
-                            <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID">@item.Title<span class="time" title="@Convert.ToDateTime(item.CreatedDate.ToString()).ToString("dd/MM/yyyy HH:mm")"></span></a>
+                            <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title">@item.Title<span class="time" title="@Convert.ToDateTime(item.CreatedDate.ToString()).ToString("dd/MM/yyyy HH:mm")"></span></a>
                         </h3>
                     </li>
                 }
@@ -93,11 +95,10 @@
         {
             <li class="daily-hot-news clearfix">
                 <h3 class="title">
-                    <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID" title="@item.Title" class="open-popup">@item.Title</a>
+                    <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title" class="open-popup">@item.Title</a>
                 </h3>
-                <a asp-controller="mtinnhanh247" asp-action="chitiet" asp-route-id="@item.GetFriendlyTitle()-@item.NewsID" title="@item.Title" class="post-ava open-popup">
+                <a href="/m.@item.TypeName/@item.GetFriendlyTitle()/@(item.NewsID).html" title="@item.Title" class="post-ava open-popup">
                     <img alt="@item.Title" class="lazy" data-src="@item.ImageTH" src="@item.ImageTH" />
-
                 </a>
                 <div class="sapo">
                     @item.ShortContent

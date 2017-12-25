@@ -51,11 +51,38 @@ namespace Research2._0
 
             app.UseMvc(routes =>
             {
+                //
+                routes.MapRoute(
+                    name: "mchi_tiet",
+                    template: "m.{TypeName}/{Alias}/{ID}.html",
+                    defaults: new { controller = "mtinnhanh247", action = "chitiet" });
+                routes.MapRoute(
+                    name: "mdanh_muc",
+                    template: "m.{Alias}-{ID}.html",
+                    defaults: new { controller = "mtinnhanh247", action = "danhmuc" });
+                routes.MapRoute(
+                    name: "mdefault",
+                    template: "{controller=mtinnhanh247}/{action=trangchu}");
+
+                routes.MapRoute(
+                    name: "chi_tiet",
+                    template: "{TypeName}/{Alias}/{ID}.html",
+                    defaults: new { controller = "tinnhanh247", action = "chitiet" });
+                routes.MapRoute(
+                    name: "danh_muc",
+                    template: "{Alias}-{ID}.html",
+                    defaults: new { controller = "tinnhanh247", action = "danhmuc" });
+               
+
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=tinnhanh247}/{action=trangchu}/{id?}");
+                    template: "{controller=tinnhanh247}/{action=trangchu}");
+                
+
             });
             WebHelpers.Configure(app.ApplicationServices.GetRequiredService<IHttpContextAccessor>());
+
+
         }
     }
 }

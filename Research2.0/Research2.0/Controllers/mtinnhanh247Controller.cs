@@ -4,7 +4,7 @@ using ResearchWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Text.RegularExpressions;
 
 namespace soha.Controllers
 {
@@ -58,16 +58,16 @@ namespace soha.Controllers
         }
         public ActionResult chitiet(string ID)
         {
+            if (!Regex.IsMatch(ID, @"\d"))
+                return RedirectToAction("trangchu", "mtinnhanh247");
             if (!objUtil.fBrowserIsMobile())
             {
                 return RedirectToAction("chitiet", "tinnhanh247", new { ID = ID });
             }
-            var arrtemp = ID.Split('-');
-            string strFeedId = arrtemp[arrtemp.Length - 1];
             //lấy 1 mẫu tin cho phần 2
             DBContext context = HttpContext.RequestServices.GetService(typeof(DBContext)) as DBContext;
             List<NewsRes> lstNews = context.GetAllNewsRes() as List<NewsRes>;
-            NewsRes it1News = lstNews.Where(c => c.NewsID == Convert.ToInt32(strFeedId)).FirstOrDefault();
+            NewsRes it1News = lstNews.Where(c => c.NewsID == Convert.ToInt32(ID)).FirstOrDefault();
             //cung danh muc
             List<NewsRes> lst2News = lstNews.Where(c => c.TypeID == it1News.TypeID && c.NewsID!=it1News.NewsID).OrderByDescending(c => c.ViewNumber).Take(3).ToList();
             //dang hot
@@ -75,26 +75,24 @@ namespace soha.Controllers
             ViewBag.it1 = it1News;
             ViewBag.it2 = lst2News;
             ViewBag.it3 = lst3News;
-            context.Update(Convert.ToInt32(strFeedId));
+            context.Update(Convert.ToInt32(ID));
             return View();
         }
-        public ActionResult danhmuc(string ID)
+        public ActionResult danhmuc(string Alias, string ID)
         {
             if (!objUtil.fBrowserIsMobile())
             {
                 return RedirectToAction("danhmuc", "tinnhanh247", new { ID = ID });
             }
-            var arrtemp = ID.Split('-');
-            string strFeedId = arrtemp[arrtemp.Length - 1];
             DBContext context = HttpContext.RequestServices.GetService(typeof(DBContext)) as DBContext;
             List<NewsRes> lstNews = context.GetAllNewsRes() as List<NewsRes>;
             //lấy 1 mẫu tin cho phần 1
-            NewsRes it1News = lstNews.Where(c => c.TypeID == Convert.ToInt32(strFeedId)).Take(1).FirstOrDefault();
+            NewsRes it1News = lstNews.Where(c => c.TypeID == Convert.ToInt32(ID)).Take(1).FirstOrDefault();
             //lấy 8 mẫu tin cho phần 2
-            List<NewsRes> it2News = lstNews.Where(c => c.TypeID == Convert.ToInt32(strFeedId) && c.NewsID!=it1News.NewsID).OrderByDescending(c=>c.ViewNumber).Take(8).ToList();
+            List<NewsRes> it2News = lstNews.Where(c => c.TypeID == Convert.ToInt32(ID) && c.NewsID!=it1News.NewsID).OrderByDescending(c=>c.ViewNumber).Take(8).ToList();
             //lấy 50 mẫu tin cho phần 5. 
             List<int> id2 = it2News.Select(c => c.NewsID).ToList();
-            List<NewsRes> lst3News = lstNews.Where(c =>c.TypeID== Convert.ToInt32(strFeedId) && c.NewsID!=it1News.NewsID && !id2.Contains(c.NewsID)).OrderByDescending(c => c.ViewNumber).Take(50).ToList();
+            List<NewsRes> lst3News = lstNews.Where(c =>c.TypeID== Convert.ToInt32(ID) && c.NewsID!=it1News.NewsID && !id2.Contains(c.NewsID)).OrderByDescending(c => c.ViewNumber).Take(50).ToList();
             ViewBag.it1 = it1News;
             ViewBag.it2 = it2News;
             ViewBag.it3 = lst3News;

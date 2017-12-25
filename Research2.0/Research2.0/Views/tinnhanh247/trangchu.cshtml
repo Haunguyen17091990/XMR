@@ -16,24 +16,24 @@
                         NewsRes item1 = ViewBag.it1 as NewsRes;
                         NewsRes item2 = ViewBag.it2 as NewsRes;
                         <li data-boxtype="homenewsposition" class="item-special-new large" data-marked-zoneid="soha_home_b1">
-                            <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item1.GetFriendlyTitle()-@item1.NewsID">
+                            <a href="/@item1.TypeName/@item1.GetFriendlyTitle()/@(item1.NewsID).html">
                                 <figure><img class='thumbs-img' onload="t_image = new Date().getTime();" title="@item1.Title" alt="@item1.Title" src="@item1.ImageTH" width="434" height="271" /><figcaption>@item1.Title</figcaption></figure>
                                 <script>t_after_image = new Date().getTime();</script>
                             </a>
                             <h3>
-                                <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item1.GetFriendlyTitle()-@item1.NewsID" title="@item1.Title" class="title-special">
-                                   @item1.Title
+                                <a href="/@item1.TypeName/@item1.GetFriendlyTitle()/@(item1.NewsID).html" title="@item1.Title" class="title-special">
+                                    @item1.Title
                                 </a>
                             </h3>
                             <p class='sapo-special-new mgb0'>@item1.ShortContent</p>
                         </li>
                         <li data-boxtype="homenewsposition" class="item-special-new small" data-marked-zoneid="soha_home_b1">
-                            <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item2.GetFriendlyTitle()-@item2.NewsID" title="@item2.Title">
+                            <a href="/@item2.TypeName/@item2.GetFriendlyTitle()/@(item2.NewsID).html" title="@item2.Title">
                                 <figure><img class='thumbs-img' onload="t_image = new Date().getTime();" title="@item2.Title" alt="@item2.Title" src="@item2.ImageTH" width="216" height="271" /><figcaption>@item2.Title</figcaption></figure>
                                 <script>t_after_image = new Date().getTime();</script>
                             </a>
                             <h3>
-                                <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item2.GetFriendlyTitle()-@item2.NewsID" title="@item2.Title" class="title-special">
+                                <a href="/@item2.TypeName/@item2.GetFriendlyTitle()/@(item2.NewsID).html" title="@item2.Title" class="title-special">
                                     @item2.Title
                                 </a>
                             </h3>
@@ -57,10 +57,15 @@
                                         {
                                             <li class="swiper-slide" data-boxtype="homenewsposition">
                                                 <div class="slide-wrap">
-                                                    <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item3.GetFriendlyTitle()-@item3.NewsID" title="@item3.Title"><figure><img class="image" title="@item3.Title" alt="@item3.Title" src="@item3.ImageTH" style="width:260px;height:162px !important" /><figcaption>@item3.Title</figcaption></figure></a>
+                                                    <a href="/@item3.TypeName/@item3.GetFriendlyTitle()/@(item3.NewsID).html" title="@item3.Title">
+                                                        <figure>
+                                                            <img class="image" title="@item3.Title" alt="@item3.Title" src="@item3.ImageTH" style="width:260px;height:162px !important" />
+                                                            <figcaption>@item3.Title</figcaption>
+                                                        </figure>
+                                                    </a>
                                                     <div class="post-detail">
                                                         <h3 class="title">
-                                                            <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item3.GetFriendlyTitle()-@item3.NewsID" title="@item3.Title">@item3.Title</a>
+                                                            <a href="/@item3.TypeName/@item3.GetFriendlyTitle()/@(item3.NewsID).html" title="@item3.Title">@item3.Title</a>
                                                         </h3>
                                                     </div>
                                                 </div>
@@ -90,13 +95,20 @@
                         List<NewsRes> lst4News = ViewBag.it4 as List<NewsRes>;
                         foreach (NewsRes item4 in lst4News)
                         {
-                            <li class='item-news-cate clearfix  related-news' data-boxtype="timelineposition" data-marked-zoneid="soha_home_bs1" data-locked="False" data-posid="0" data-newsid="20171122101322369" data-slottype='relatednews'>
-                                <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item4.Title-@item4.NewsID" title="@item4.Title"><figure><img style="width:260px;height:162px !important" class="thumbs-img" title="@item4.Title" alt="@item4.Title" src="@item4.ImageTH" width="260" height="162" /><figcaption>@item4.Title</figcaption></figure></a>
-                                <div class='info-new-cate elp-list'>
-                                    <h3><a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item4.Title-@item4.NewsID" title="@item4.Title" class="title-new-cate" data-id="20171122101322369" newsid="20171122101322369" arrnewsid="20171122101322369">@item4.Title</a></h3>
-                                    <span class='sapo-new'>@item4.ShortContent</span>
-                                </div>
-                            </li>
+                    <li class='item-news-cate clearfix  related-news' data-boxtype="timelineposition" data-marked-zoneid="soha_home_bs1" data-locked="False" data-posid="0" data-newsid="20171122101322369" data-slottype='relatednews'>
+                        @*<a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item4.Title-@item4.NewsID" title="@item4.Title">*@
+                        <a href="/@item4.TypeName/@item4.GetFriendlyTitle()/@(item4.NewsID).html" title="@item4.Title">
+                            <figure><img style="width:260px;height:162px !important" class="thumbs-img" title="@item4.Title" alt="@item4.Title" src="@item4.ImageTH" width="260" height="162" /><figcaption>@item4.Title</figcaption></figure>
+                        </a>
+                        <div class='info-new-cate elp-list'>
+                            <h3>
+                                <a href="/@item4.TypeName/@item4.GetFriendlyTitle()/@(item4.NewsID).html" title="@item4.Title" class="title-new-cate">
+                                    @item4.Title
+                                </a>
+                            </h3>
+                            <span class='sapo-new'>@item4.ShortContent</span>
+                        </div>
+                    </li>
                         }
                     }
                 </ul>
@@ -133,7 +145,12 @@
                                                     <div class='time new'>
                                                         @Convert.ToDateTime(item5.CreatedDate.ToString()).ToString("HH:mm")
                                                     </div>
-                                                    <h3><a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item5.GetFriendlyTitle()-@item5.NewsID" title="@item5.Title" class='title' data-linktype="newsdetail" data-id="20171122133852197">@item5.Title</a></h3>
+                                                    <h3>
+                                                        @*<a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item5.GetFriendlyTitle()-@item5.NewsID" title="@item5.Title" class='title' data-linktype="newsdetail" data-id="20171122133852197">*@
+                                                        <a href="/@item5.TypeName/@item5.GetFriendlyTitle()/@(item5.NewsID).html" title="@item5.Title" class='title'>
+                                                            @item5.Title
+                                                        </a>
+                                                    </h3>
                                                 </div>
                                             </li>
                                         }
@@ -157,10 +174,10 @@
                                         {
                                             <li class="swiper-slide ">
                                                 <div class="slide-wrap">
-                                                    <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item6.GetFriendlyTitle()-@item6.NewsID" title="@item6.Title"><figure><img class="image" title="@item6.Title" alt="@item6.Title" src="@item6.ImageTH" style="width:260px;height:162px !important" /><figcaption>@item6.Title</figcaption></figure></a>
+                                                    <a href="/@item6.TypeName/@item6.GetFriendlyTitle()/@(item6.NewsID).html" title="@item6.Title"><figure><img class="image" title="@item6.Title" alt="@item6.Title" src="@item6.ImageTH" style="width:260px;height:162px !important" /><figcaption>@item6.Title</figcaption></figure></a>
                                                     <div class="post-detail">
                                                         <h3 class="title">
-                                                            <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@item6.GetFriendlyTitle()-@item6.NewsID" title="@item6.Title">@item6.Title</a>
+                                                            <a href="/@item6.TypeName/@item6.GetFriendlyTitle()/@(item6.NewsID).html" title="@item6.Title">@item6.Title</a>
                                                         </h3>
                                                         <div class="summary">
                                                             <div class='sm-detail'>

@@ -18,15 +18,14 @@
                 <div class="clearfix f1">
                     <div data-boxtype="zonenewsposition" id="sohaHighlightZone1" class="zone1 fl related-news" data-slottype="relatednews">
                         @{
-
-                            <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it1.GetFriendlyTitle()-@it1.NewsID" title="@it1.Title">
+                            <a href="/@it1.TypeName/@it1.GetFriendlyTitle()/@(it1.NewsID).html" title="@it1.Title">
                                 <figure>
                                     <img class="" title="@it1.Title" alt="@it1.Title" src="@it1.ImageTH" style="width:612px;height:259px !important" />
                                     <figcaption>@it1.Title</figcaption>
                                 </figure>
                             </a>
                             <h2 class="title clearfix">
-                                <a class="inner show-popup" asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it1.GetFriendlyTitle()-@it1.NewsID" title="@it1.Title" data-linktype="newsdetail">@it1.Title</a>
+                                <a href="/@it1.TypeName/@it1.GetFriendlyTitle()/@(it1.NewsID).html" title="@it1.Title" data-linktype="newsdetail">@it1.Title</a>
                             </h2>
                             <p class="sapo">@it1.ShortContent</p>
                         }
@@ -35,7 +34,9 @@
                                 foreach (NewsRes it2 in p1.Skip(1).Take(2).ToList())
                                 {
                                     <li class='item-related-news'>
-                                        <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it2.GetFriendlyTitle()-@it2.NewsID" title="@it2.Title" class="title show-popup">@it2.Title</a>
+                                        <a href="/@it2.TypeName/@it2.GetFriendlyTitle()/@(it2.NewsID).html" title="@it2.Title" class="title show-popup">
+                                            @it2.Title
+                                        </a>
                                     </li>
                                 }
                             }
@@ -47,21 +48,27 @@
                                 foreach (NewsRes it2 in p2.Take(1).ToList())
                                 {
                                     <li class="first" data-boxtype="zonenewsposition">
-                                        <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it2.GetFriendlyTitle()-@it2.NewsID" title="@it2.Title">
+                                        <a href="/@it2.TypeName/@it2.GetFriendlyTitle()/@(it2.NewsID).html" title="@it2.Title">
                                             <figure>
                                                 <img class="" title="@it2.Title" src="@it2.ImageTH" style="width:326px;height:144px !important" />
                                                 <figcaption>@it2.Title</figcaption>
                                             </figure>
                                         </a><h2>
-                                            <a class="title show-popup" asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it2.GetFriendlyTitle()-@it2.NewsID" title="@it2.Title" data-linktype="newsdetail">@it2.Title</a>
-                                        </h2><p class="sapo">@it2.ShortContent</p>
+                                                <a href="/@it2.TypeName/@it2.GetFriendlyTitle()/@(it2.NewsID).html" title="@it2.Title" data-linktype="newsdetail">
+                                                    @it2.Title
+                                                </a>
+                                            </h2><p class="sapo">@it2.ShortContent</p>
                                     </li>
                                 }
                             }
                             @{
                                 foreach (NewsRes it2 in p2.Skip(0).ToList())
                                 {
-                                    <li data-boxtype="zonenewsposition"><a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it2.GetFriendlyTitle()-@it2.NewsID" title="@it2.Title" class="title show-popup" data-linktype="newsdetail">@it2.Title</a></li>
+                                    <li data-boxtype="zonenewsposition">
+                                        <a href="/@it2.TypeName/@it2.GetFriendlyTitle()/@(it2.NewsID).html" title="@it2.Title" data-linktype="newsdetail" class="title show-popup">
+                                            @it2.Title
+                                        </a>
+                                    </li>
                                 }
                             }
                         </ul>
@@ -77,10 +84,12 @@
                                 {
                                     <li data-boxtype='zonenewsposition' class="swiper-slide">
                                         <div class="slide-wrap">
-                                            <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it3.GetFriendlyTitle()-@it3.NewsID" title="@it3.Title"><figure><img class="image" title="@it3.Title" alt="@it3.Title" src="@it3.ImageTH" style="width:260px;height:162px !important"/><figcaption>@it3.Title</figcaption></figure></a>
+                                            <a href="/@it3.TypeName/@it3.GetFriendlyTitle()/@(it3.NewsID).html" title="@it3.Title"><figure><img class="image" title="@it3.Title" alt="@it3.Title" src="@it3.ImageTH" style="width:260px;height:162px !important" /><figcaption>@it3.Title</figcaption></figure></a>
                                             <div class="post-detail">
                                                 <h3 class="title">
-                                                    <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it3.GetFriendlyTitle()-@it3.NewsID" title="@it3.Title" data-linktype="newsdetail">@it3.Title</a>
+                                                    <a href="/@it3.TypeName/@it3.GetFriendlyTitle()/@(it3.NewsID).html" title="@it3.Title" data-linktype="newsdetail">
+                                                        @it3.Title
+                                                    </a>
                                                 </h3>
                                             </div>
                                         </div>
@@ -105,9 +114,13 @@
                         foreach (NewsRes it4 in p4)
                         {
                             <li class='item-news-cate clearfix  related-news' data-locked="false" data-slottype='relatednews'>
-                                <a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it4.GetFriendlyTitle()-@it4.NewsID" title="@it4.Title" class=""><figure><img class="thumbs-img" title="@it4.Title" alt="@it4.Title" src="@it4.ImageTH" style="width:260px;height:162px !important"/><figcaption>@it4.Title</figcaption></figure></a>
+                                <a href="/@it4.TypeName/@it4.GetFriendlyTitle()/@(it4.NewsID).html" title="@it4.Title"><figure><img class="thumbs-img" title="@it4.Title" alt="@it4.Title" src="@it4.ImageTH" style="width:260px;height:162px !important" /><figcaption>@it4.Title</figcaption></figure></a>
                                 <div class='info-new-cate elp-list'>
-                                    <h3><a asp-controller="tinnhanh247" asp-action="chitiet" asp-route-id="@it4.GetFriendlyTitle()-@it4.NewsID" title="@it4.Title" class="title-new-cate">@it4.Title</a></h3>
+                                <h3>
+                                    <a href="/@it4.TypeName/@it4.GetFriendlyTitle()/@(it4.NewsID).html" title="@it4.Title" class="title-new-cate">
+                                        @it4.Title
+                                    </a>
+                                </h3>
                                     <p>
                                         <span class='time-new kcnwn-meta date-time' title="@Convert.ToDateTime(it4.CreatedDate.ToString()).ToString("dd/MM/yyyy HH:mm")"></span>
                                     </p>
