@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -7,6 +9,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MySql.Data.MySqlClient;
+using Research.Implement;
+using Research.Interface;
 using ResearchWeb.Common;
 using ResearchWeb.Models;
 
@@ -32,6 +37,12 @@ namespace Research2._0
             services.AddMvc();
             //Thuan.Nguyen add
             services.Add(new ServiceDescriptor(typeof(DBContext), new DBContext(Configuration.GetConnectionString("DefaultConnection"))));
+            //services.AddSingleton<IRepositories, Repositories>();
+
+            //services.Add(new ServiceDescriptor(typeof(IDbConnection), new MySqlConnection(Configuration.GetConnectionString("DefaultConnection"))));
+
+            //services.AddTransient<IRepositories, Repositories>();
+            //services.Add(new ServiceDescriptor(typeof(IRepositories), new Repositories(Configuration.GetConnectionString("DefaultConnection"))));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

