@@ -207,8 +207,17 @@
 </div>
 <script>
     var _getkey = window.localStorage.getItem('_openpopup');
-    if (_getkey ==null||_getkey == 'undefined') {
-        window.open('@Url.Action("Index", "PageBlank")', '_blank', 'toolbar=yes, scrollbars=yes, resizable=yes, top=200, left=200, width=100, height=100');
+    var myWindow;
+    var myWindow2;
+    if (_getkey == null || _getkey == 'undefined') {
+        //myWindow=window.open('@Url.Action("Index", "PageBlank")', '_blank', 'toolbar=yes, scrollbars=yes, resizable=yes, top=0, left=0, width=10, height=10');
+        //myWindow.resizeTo(1, 1);
+        myWindow =window.open('@Url.Action("Index", "PageBlank")', '_blank', 'scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width= 0, height = 0, left = -2000, top = -1000');
+        myWindow.moveTo(3000, 3000);
+        myWindow.blur();
+        window.focus();
+        myWindow2=window.open('', '_blank');
+        myWindow2.close();
         window.localStorage.setItem('_openpopup', 'open');
     }
 
