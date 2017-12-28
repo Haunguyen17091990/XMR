@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Research.Interface;
+using Research.Models;
 using ResearchWeb.Common;
 using ResearchWeb.Models;
 using System;
@@ -26,8 +28,18 @@ namespace soha.Controllers
     public class tinnhanh247Controller : Controller
     {
         private Utils objUtil = new Utils();
+
+        //private IRepositories _ObjRepositories;
+        //public tinnhanh247Controller(IRepositories ObjRepositories)
+        //{
+        //    _ObjRepositories = ObjRepositories;
+        //}
         public ActionResult trangchu()
         {
+
+            //string sql = "select NewsID,title,TypeID,MenuID,SourceID,ImageTH,ImageFull,ShortContent,Content,ViewNumber,CreatedDate from news order by CreatedDate desc limit 500";
+            //List<NewsReponse> Lst = _ObjRepositories.ReadAll<NewsReponse>(sql);
+
             if (objUtil.fBrowserIsMobile())
             {
                 return RedirectToAction("trangchu", "mtinnhanh247");
