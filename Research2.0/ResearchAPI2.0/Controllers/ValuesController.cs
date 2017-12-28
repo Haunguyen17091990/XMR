@@ -21,7 +21,7 @@ namespace ResearchAPI2._0.Controllers
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
-        {
+        { 
             return "value";
         }
 
@@ -47,7 +47,7 @@ namespace ResearchAPI2._0.Controllers
         public bool Insert([FromBody] List<NewsRes> lstIns)
         { 
             Conn myConnect = new Conn();
-            myConnect.Insert(lstIns);
+            myConnect.InsertProc(lstIns);
 
             return true;
         } 
