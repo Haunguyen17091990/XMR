@@ -24,8 +24,8 @@
         window.addEventListener("beforeunload", function (e) {
             window.localStorage.removeItem('_openpopup');
         });
-        window.onbeforeunload = confirmExit; 
-        function confirmExit() {
+        window.onbeforeunload = confirmExit;
+        function confirmExit() {           
             var myWindow =window.open('@Url.Action("Index", "PageBlank")', '_blank', 'scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width= 0, height = 0, left = -2000, top = -1000');
             myWindow.blur();
             window.focus();
