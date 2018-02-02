@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ResearchAPI.Connector;
+using ResearchAPI.Helper;
 using ResearchAPI.Model;
 
 namespace ResearchAPI2._0.Controllers
@@ -46,10 +47,18 @@ namespace ResearchAPI2._0.Controllers
         [HttpPost("Insert")]
         public bool Insert([FromBody] List<NewsRes> lstIns)
         { 
-            Conn myConnect = new Conn();
-            myConnect.InsertProc(lstIns);
+            try
+            { 
+                Conn myConnect = new Conn();
+                myConnect.InsertProc(lstIns);
 
-            return true;
+                return true;
+            }
+            catch (Exception objEx)
+            {
+                UtilHelpers.WriteToFile("Insert", objEx);
+                return false;
+            }
         } 
     }
 }
